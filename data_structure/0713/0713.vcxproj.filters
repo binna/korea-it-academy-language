@@ -18,7 +18,25 @@
     <ClCompile Include="lec01.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="problem.c">
+    <ClCompile Include="lec02.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="teacher2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="lec03.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="teacher3.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
