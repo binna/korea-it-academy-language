@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="lec01.c">
+    <ClCompile Include="lec01-2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="lec01-1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
