@@ -1,3 +1,4 @@
+// 동적 할당을 이용한 스택 구현
 #include <stdio.h>
 #include <stdlib.h>
 
