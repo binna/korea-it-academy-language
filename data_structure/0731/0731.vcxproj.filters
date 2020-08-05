@@ -21,5 +21,14 @@
     <ClCompile Include="lec02.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="lec03.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="lec04.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="problem.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
