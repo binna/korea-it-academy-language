@@ -38,7 +38,7 @@ int main() {
 		arr[i] = rand() % 100 + 1;
 	}
 	for (int i = 0; i < 10; i++) {
-		printf("%d", arr[i]);
+		printf("%d, ", arr[i]);
 	}
 
 	printf("\n"); 
@@ -54,6 +54,7 @@ int main() {
 	int start = index == 0 ? 1 : arr[index - 1];
 	int end = index == 9 ? 100 : arr[index + 1];
 	int cnt = 0;
+
 	while (1) {
 		printf("%d ~ %d : ", start, end);
 		int n;
