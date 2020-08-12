@@ -34,6 +34,9 @@ void preorder(N* node) {
 		preorder(node->left);
 		preorder(node->right);
 	}
+
+	// TODO
+
 }
 // 중위순회
 void inorder(N* node) {
@@ -42,6 +45,9 @@ void inorder(N* node) {
 		printf("%d ", node->data);
 		inorder(node->right);
 	}
+
+	// TODO
+
 }
 // 후위순회
 void postorder(N* node) {
@@ -50,13 +56,32 @@ void postorder(N* node) {
 		postorder(node->right);
 		printf("%d ", node->data);
 	}
+
+	// TODO
+
 }
 
 // 노드 삭제
 void del(N* node, int data) {
-
-	// TODO
-
+	N *c = node;
+	N *p = NULL;		// 비주얼 스튜디오에서는 초기화하지않은 포인터의 사용을 지양함
+	while (c != NULL && c->data != data) {
+		p = c;
+		c = data < c->data ? c->left : c->right;
+	}
+	if (c == NULL) {
+		printf("삭제할노드가없음!\n");
+		return;
+	}
+	if (c->left == NULL && c->right == NULL) {
+		// 삭제할 노드가 리프노드일때
+		if (p->left == c) {
+			p->left = NULL;
+		}
+		else {
+			p->right = NULL;
+		}
+	}
 }
 
 int main() {
@@ -64,7 +89,7 @@ int main() {
 
 	int act;
 	while (1) {
-		printf("1.노드생성 2.전위순회 3.중위순회 4.후위순회 5.노드삭제 6.종료\n");
+		printf("1. 노드생성 2.전위순회 3.중위순회 4.후위순회 5.노드삭제 6.종료\n");
 		scanf("%d", &act);
 		if (act == 1) {
 			int data;
@@ -73,20 +98,20 @@ int main() {
 			root = create(root, data);
 		}
 		else if (act == 2) {
-			preorder(root); // 전위순회
+			preorder(root);	// 전위순회
 			printf("\n");
 		}
 		else if (act == 3) {
-			inorder(root); // 중위순회
+			inorder(root);	// 중위순회
 			printf("\n");
 		}
 		else if (act == 4) {
-			postorder(root); // 후위순회
+			postorder(root);	// 후위순회
 			printf("\n");
 		}
 		else if (act == 5) {
 			int data;
-			printf("삭제할데이터입력: ");
+			printf("삭제할 데이터 입력: ");
 			scanf("%d", &data);
 			del(root, data);
 		}
