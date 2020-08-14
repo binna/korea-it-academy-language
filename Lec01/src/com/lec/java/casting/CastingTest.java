@@ -55,6 +55,7 @@ class SuperCar extends Car {
 } // end class SuperCar
 
 public class CastingTest {
+	
 	public static void main(String[] args) {
 		// Car(부모), SuperCar(자식)
 		Car matiz = new Car();
