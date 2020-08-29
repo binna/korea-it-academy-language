@@ -12,7 +12,8 @@ public class WrapperClass2 {
 		// 2. auto-boxing
 		
 		// auto-boxing 사용하지 않는다면...!!
-		Object[] datasNoAuto = {new Integer(3), new Double(3.0),new Character('A'), new String("ABC"), new Boolean(true)};
+		Object[] datasNoAuto = {new Integer(3), new Double(3.0),
+				new Character('A'), new String("ABC"), new Boolean(true)};
 		
 		// 빠른 for문(forEach문, 향상된 for문)을 이용하여 저장된 데이터 출력하기
 		System.out.println("빠른 for문 : datas");
