@@ -1,4 +1,4 @@
-package com.lec.java.ch08;
+package com.lec.java.ch8;
 
 public class ExceptionEx1 {
 	
