@@ -53,7 +53,6 @@ public class Obj_test {
 		System.out.println("-----------------------------------------");
 		System.out.println(obj.hashCode());
 		System.out.println(obj.toString());
-		
 	} // end main()
 
 } // end class
