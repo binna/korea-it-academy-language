@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class Farm {
 	
 	public static void main(String[] args) {
-		Flower flower = new Flower(2, "진달래", 3000);
+		Flower flower = new Flower(0, "진달래", 3000);
 		Tomato tomato = new Tomato(0, "토마토", 5000);
 		Potato potato = new Potato(0, "감자", 10000);
-		Ginseng ginseng = new Ginseng(0, "인삼", 100000);
+		Ginseng ginseng = new Ginseng(0, "인삼", 15000);
 		
 		// up casting
-		// 각 객체에 규칙성을 부여하기 위해
+		// 각 객체에 규칙성을 부여하기 위해서 사용한다.
 		Plant[] plants = {flower, tomato, potato, ginseng};
 		int[] costs = {2, 5, 20};
 		int choice = 0;

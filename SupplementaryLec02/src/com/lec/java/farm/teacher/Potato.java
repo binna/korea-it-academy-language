@@ -8,7 +8,7 @@ public class Potato extends Plant {
 	
 	@Override
 	public boolean check(Plant plant) {
-		if(plant instanceof Potato) {
+		if(plant instanceof Tomato) {
 			if(plant.cnt >= 5) {
 				return true;
 			}
