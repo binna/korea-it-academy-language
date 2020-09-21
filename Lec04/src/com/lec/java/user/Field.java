@@ -3,11 +3,11 @@ package com.lec.java.user;
 import java.util.ArrayList;
 
 public class Field {
-	// ≥ª∫Œ DB
+	// ÎÇ¥Î∂Ä DB
 	ArrayList<User> users = new ArrayList<>();
-	// vs ø‹∫Œ DB : oracle DB, MariaD, MySQL µÓ
+	// vs Ïô∏Î∂Ä DB : oracle DB, MariaDB, MySQL Îì±
 	
-	// ¡ﬂ∫π√º≈©
+	// Ï§ëÎ≥µÏ≤¥ÌÅ¨
 	public User checkId(String id) {
 		User user = null;
 		for (int i = 0; i < users.size(); i++) {
@@ -18,17 +18,17 @@ public class Field {
 		return user;
 	}
 	
-	// »∏ø¯∞°¿‘
+	// ÌöåÏõêÍ∞ÄÏûÖ
 	public void join(User user) {
 		if(checkId(user.getId()) == null) {
 			users.add(user);
 		}
 	}
 	
-	// ∑Œ±◊¿Œ
+	// Î°úÍ∑∏Ïù∏
 	
-	// æœ»£»≠
+	// ÏïîÌò∏Ìôî
 	
-	// ∫π»£»≠
+	// Î≥µÌò∏Ìôî
 
 }
