@@ -20,7 +20,7 @@ public class Field {
 	
 	// 회원가입
 	public void join(User user) {
-		if(checkId(user.getId()) != null) {
+		if(checkId(user.getId()) == null) {
 			users.add(user);
 		}
 	}
