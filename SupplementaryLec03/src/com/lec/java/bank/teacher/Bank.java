@@ -1,24 +1,24 @@
 package com.lec.java.bank.teacher;
-/* ¹®Á¦
- * ±¹¹ÎÀºÇà	: Ãâ±İ½Ã ¼ö¼ö·á 50%
- * ½ÅÇÑÀºÇà	: ÀÔ±İ½Ã ¼ö¼ö·á 50%
- * ¿ì¸®ÀºÇà	: ÀÜ¾× Á¶È¸½Ã ¼ö¼ö·á ÀüÀç»ê ¹İÅä¸·
+/* ë¬¸ì œ
+ * êµ­ë¯¼ì€í–‰	: ì¶œê¸ˆì‹œ ìˆ˜ìˆ˜ë£Œ 50%
+ * ì‹ í•œì€í–‰	: ì…ê¸ˆì‹œ ìˆ˜ìˆ˜ë£Œ 50%
+ * ìš°ë¦¬ì€í–‰	: ì”ì•¡ ì¡°íšŒì‹œ ìˆ˜ìˆ˜ë£Œ ì „ì¬ì‚° ë°˜í† ë§‰
  * 
- * °¢ ÀºÇàº°·Î 100°³ÀÇ ÀúÀå¼Ò¸¦ ¸¸µé¾î¶ó.
+ * ê° ì€í–‰ë³„ë¡œ 100ê°œì˜ ì €ì¥ì†Œë¥¼ ë§Œë“¤ì–´ë¼.
  */
 public class Bank {
 	int money;
-	// ¿¹±İÁÖ, °èÁÂ¹øÈ£, ºñ¹Ğ¹øÈ£, ÈŞ´ëÆù¹øÈ£
+	// ì˜ˆê¸ˆì£¼, ê³„ì¢Œë²ˆí˜¸, ë¹„ë°€ë²ˆí˜¸, íœ´ëŒ€í°ë²ˆí˜¸
 	String name;
 	String account;
 	String pw;
 	String phone;
 	
-	// ÀÔ±İ
+	// ì…ê¸ˆ
 	public void deposit(int money) {
 		this.money += money;
 	}
-	// Ãâ±İ
+	// ì¶œê¸ˆ
 	public boolean withdraw(int money) {
 		if(money - this.money <= 0) {
 			this.money -= money;
@@ -26,7 +26,7 @@ public class Bank {
 		}
 		return false;
 	}
-	// ÀÜ¾×Á¶È¸
+	// ì”ì•¡ì¡°íšŒ
 	public int showBalance() {
 		return this.money;
 	}

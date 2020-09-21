@@ -8,8 +8,8 @@ public class Custom {
 		Bank[] bank = {new Kookmin(), new Shinhan(), new Woori()};
 		
 		while(true) {
-			System.out.println("¾î¶² ÀºÇàÀÎ°¡¿ä?");
-			System.out.println("1.±¹¹ÎÀºÇà\n2.½ÅÇÑÀºÇà\n3.¿ì¸®ÀºÇà\n4.³ª°¡±â");
+			System.out.println("ì–´ë–¤ ì€í–‰ì¸ê°€ìš”?");
+			System.out.println("1.êµ­ë¯¼ì€í–‰\n2.ì‹ í•œì€í–‰\n3.ìš°ë¦¬ì€í–‰\n4.ë‚˜ê°€ê¸°");
 			int choice = new Scanner(System.in).nextInt();
 			
 			if(choice == 4) {break;}
@@ -20,18 +20,18 @@ public class Custom {
 			case 2:
 			case 3:
 				int money = 0;
-				System.out.println("¾î¶² ÀÛ¾÷À» ¿øÇÏ½Ã³ª¿ä?");
-				System.out.println("1.ÀÔ±İ\n2.Ãâ±İ\n3.Á¶È¸");
+				System.out.println("ì–´ë–¤ ì‘ì—…ì„ ì›í•˜ì‹œë‚˜ìš”?");
+				System.out.println("1.ì…ê¸ˆ\n2.ì¶œê¸ˆ\n3.ì¡°íšŒ");
 				
 				int work = new Scanner(System.in).nextInt();
 				switch (work) {
 				case 1:
-					System.out.println("¾ó¸¶ ÀÔ±İÇÒ·¡?");
+					System.out.println("ì–¼ë§ˆ ì…ê¸ˆí• ë˜?");
 					money = new Scanner(System.in).nextInt();
 					bank[choice-1].deposit(money);
 					break;
 				case 2:
-					System.out.println("¾ó¸¶ Ãâ±İÇÒ·¡?");
+					System.out.println("ì–¼ë§ˆ ì¶œê¸ˆí• ë˜?");
 					money = new Scanner(System.in).nextInt();
 					bank[choice-1].withdraw(money);
 					break;
@@ -40,18 +40,18 @@ public class Custom {
 					break;
 	
 				default:
-					System.out.println("ÀÛ¾÷À» Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+					System.out.println("ì‘ì—…ì„ ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 					continue;
 				}
 				break;
 			default:
-				System.out.println("ÀºÇàÀ» Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+				System.out.println("ì€í–‰ì„ ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 				continue;
 			}
 			
 		} // end while()
 		
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 	} // end main()
 
 } // end class

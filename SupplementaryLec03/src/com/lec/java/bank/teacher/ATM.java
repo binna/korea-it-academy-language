@@ -4,26 +4,26 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ATM {
-	// ¼Ò½ºÄÚµå °£°áÈ­
+	// ì†ŒìŠ¤ì½”ë“œ ê°„ê²°í™”
 	public void useAtm() {
-		// ÀºÇàº° ÃÖ´ë 100¸íÀÇ °í°´ ¼ö¿ë °¡´É
+		// ì€í–‰ë³„ ìµœëŒ€ 100ëª…ì˜ ê³ ê° ìˆ˜ìš© ê°€ëŠ¥
 		Kookmin[] arKookmin = new Kookmin[100];
 		Shinhan[] arShinhan = new Shinhan[100];
 		Woori[] arWoori = new Woori[100];
 		
-		// °¢ ÀºÇàº° °í°´ÀÇ Á¤º¸¸¦ ´ãÀ» ¼ö ÀÖ°Ô 100°³ÀÇ ÇÊµå¾¿ ¸Ş¸ğ¸®¿¡ ÇÒ´ç
+		// ê° ì€í–‰ë³„ ê³ ê°ì˜ ì •ë³´ë¥¼ ë‹´ì„ ìˆ˜ ìˆê²Œ 100ê°œì˜ í•„ë“œì”© ë©”ëª¨ë¦¬ì— í• ë‹¹
 		for(int i = 0; i < arKookmin.length; i++) {
 			arKookmin[i] = new Kookmin();
 			arShinhan[i] = new Shinhan();
 			arWoori[i] = new Woori();
 		}
 		
-		// °¢ ÀºÇà ¹è¿­À» ´ãÀ» 2Â÷¿ø ¹è¿­
+		// ê° ì€í–‰ ë°°ì—´ì„ ë‹´ì„ 2ì°¨ì› ë°°ì—´
 		Bank[][] arrBank = {arKookmin, arShinhan, arWoori};
 		
-		String msg = "ÀºÇàÀ» °í¸£¼¼¿ä.\n1.±¹¹ÎÀºÇà\n2.½ÅÇÑÀºÇà\n3.¿ì¸®ÀºÇà\n4.³ª°¡±â";
-		String optionMsg = "1.°èÁÂ°³¼³\n2.ÀÔ±İÇÏ±â\n3.Ãâ±İÇÏ±â\n4.ÀÜ¾×Á¶È¸\n5.µ¹¾Æ°¡±â";
-		String errMsg = "´Ù½Ã ½ÃµµÇØÁÖ¼¼¿ä.";
+		String msg = "ì€í–‰ì„ ê³ ë¥´ì„¸ìš”.\n1.êµ­ë¯¼ì€í–‰\n2.ì‹ í•œì€í–‰\n3.ìš°ë¦¬ì€í–‰\n4.ë‚˜ê°€ê¸°";
+		String optionMsg = "1.ê³„ì¢Œê°œì„¤\n2.ì…ê¸ˆí•˜ê¸°\n3.ì¶œê¸ˆí•˜ê¸°\n4.ì”ì•¡ì¡°íšŒ\n5.ëŒì•„ê°€ê¸°";
+		String errMsg = "ë‹¤ì‹œ ì‹œë„í•´ì£¼ì„¸ìš”.";
 		
 		String name = null;
 		String account = null;
@@ -36,75 +36,75 @@ public class ATM {
 		int choice = 0;
 		int optionChoice = 0;
 		
-		// ÀºÇàº° È¸¿ø ¼ö
+		// ì€í–‰ë³„ íšŒì› ìˆ˜
 		int[] arUserCnt = {Kookmin.cnt, Shinhan.cnt, Woori.cnt};
 		
-		// °èÁÂ¹øÈ£ Áßº¹°Ë»ç¿¡ »ç¿ëµÉ flag
+		// ê³„ì¢Œë²ˆí˜¸ ì¤‘ë³µê²€ì‚¬ì— ì‚¬ìš©ë  flag
 		boolean check = false;
 		
 		while(true) {
 			System.out.println(msg);
-			// ÀºÇà¹øÈ£(1ºÎÅÍ ½ÃÀÛ)
+			// ì€í–‰ë²ˆí˜¸(1ë¶€í„° ì‹œì‘)
 			choice = sc.nextInt();
 			
-			// ³ª°¡±â
+			// ë‚˜ê°€ê¸°
 			if(choice == 4) {break;}
 			
 			while(true) {
 				System.out.println(optionMsg);
 				optionChoice = sc.nextInt();
 				
-				// µ¹¾Æ°¡±â
+				// ëŒì•„ê°€ê¸°
 				if(optionChoice == 5) {break;}
 				
 				switch (optionChoice) {
-				// °èÁÂ °³¼³(¿¹±İÁÖ, °èÁÂ¹øÈ£, ºñ¹Ğ¹øÈ£, ÈŞ´ëÆù¹øÈ£)
+				// ê³„ì¢Œ ê°œì„¤(ì˜ˆê¸ˆì£¼, ê³„ì¢Œë²ˆí˜¸, ë¹„ë°€ë²ˆí˜¸, íœ´ëŒ€í°ë²ˆí˜¸)
 				case 1:
-					System.out.print("¿¹±İÁÖ : ");
+					System.out.print("ì˜ˆê¸ˆì£¼ : ");
 					name = sc.next();
 					
-					// °èÁÂ¹øÈ£´Â 6ÀÚ¸® Áßº¹¾ø´Â Á¤¼ö
+					// ê³„ì¢Œë²ˆí˜¸ëŠ” 6ìë¦¬ ì¤‘ë³µì—†ëŠ” ì •ìˆ˜
 					// 100000 ~ 999999
 					// 0 ~ 899999 + 100000
 					do {
-						// Áßº¹ ¿©ºÎ È®ÀÎ flag
+						// ì¤‘ë³µ ì—¬ë¶€ í™•ì¸ flag
 						check = false;
 						account = (r.nextInt(900000) + 100000) + "";
-						// Áßº¹°Ë»ç
+						// ì¤‘ë³µê²€ì‚¬
 						for(int i = 0; i < arrBank.length; i++) {
-							// arUserCnt[i] : ÇØ´ç ÀºÇàÀÇ È¸¿ø ¼ö
+							// arUserCnt[i] : í•´ë‹¹ ì€í–‰ì˜ íšŒì› ìˆ˜
 							for(int j = 0; j < arUserCnt[i]; j++) {
 								if(arrBank[i][j].account.equals(account)) {
-									// Áßº¹½Ã check´Â true
+									// ì¤‘ë³µì‹œ checkëŠ” true
 									check = true;
 								}
 							}
 						}
-					// Áßº¹µÇÁö ¾ÊÀ» ¶§±îÁö ¹«ÇÑ¹İº¹
+					// ì¤‘ë³µë˜ì§€ ì•Šì„ ë•Œê¹Œì§€ ë¬´í•œë°˜ë³µ
 					} while(check);
 					
 					do {
-						System.out.print("¼³Á¤ÇÒ ºñ¹Ğ¹øÈ£ 4ÀÚ¸® : ");
+						System.out.print("ì„¤ì •í•  ë¹„ë°€ë²ˆí˜¸ 4ìë¦¬ : ");
 						pw = sc.next();
-					} while(pw.length() != 4);	// ºñ¹Ğ¹øÈ£°¡ 4ÀÚ¸®ÀÌ¸é Å»Ãâ
+					} while(pw.length() != 4);	// ë¹„ë°€ë²ˆí˜¸ê°€ 4ìë¦¬ì´ë©´ íƒˆì¶œ
 					
 					while(true) {
-						System.out.print("ÈŞ´ëÆù ¹øÈ£(-Á¦¿Ü) : ");
+						System.out.print("íœ´ëŒ€í° ë²ˆí˜¸(-ì œì™¸) : ");
 						phone = sc.next();
 						try {
-							// ÈŞ´ëÆù ¹øÈ£¸¦ Á¤¼ö·Î Çüº¯È¯½Ã ¿À·ù°¡ ¹ß»ıÇÏÁö ¾Ê´Â´Ù¸é Á¤»ó ÀÔ·Â
+							// íœ´ëŒ€í° ë²ˆí˜¸ë¥¼ ì •ìˆ˜ë¡œ í˜•ë³€í™˜ì‹œ ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì§€ ì•ŠëŠ”ë‹¤ë©´ ì •ìƒ ì…ë ¥
 							Integer.parseInt(phone);
-							// Á¤»óÀÔ·Â½Ã break ¹ßµ¿
+							// ì •ìƒì…ë ¥ì‹œ break ë°œë™
 							break;
 						} catch (NumberFormatException e) {
-							// Á¤»ó ÀÔ·ÂÀÌ ¾Æ´Ò½Ã ¿¹¿Ü°¡ ¹ß»ıÇÏ¿© µé¾î¿È
-							System.out.println("¼ıÀÚ¸¸ ÀÔ·ÂÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+							// ì •ìƒ ì…ë ¥ì´ ì•„ë‹ì‹œ ì˜ˆì™¸ê°€ ë°œìƒí•˜ì—¬ ë“¤ì–´ì˜´
+							System.out.println("ìˆ«ìë§Œ ì…ë ¥í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
 						}
 					}
 					
-					// ½Å±Ô °í°´ ÇÊµåÀÇ ÁÖ¼Ò¸¦ temp¿¡ ´ã¾ÆµĞ´Ù.
-					// [Çà] choice - 1 : »ç¿ëÀÚ°¡ ¼±ÅÃÇÑ ÀºÇà
-					// [¿­] arUserCnt[choice - 1] : »ç¿ëÀÚ°¡ ¼±ÅÃÇÑ ÀºÇàÀÇ È¸¿ø ¼ö(6ÀÏ¶§ 6¹øÂ° ÀÎµ¦½º°¡ ½Å±Ô È¸¿ø ÀÚ¸®)
+					// ì‹ ê·œ ê³ ê° í•„ë“œì˜ ì£¼ì†Œë¥¼ tempì— ë‹´ì•„ë‘”ë‹¤.
+					// [í–‰] choice - 1 : ì‚¬ìš©ìê°€ ì„ íƒí•œ ì€í–‰
+					// [ì—´] arUserCnt[choice - 1] : ì‚¬ìš©ìê°€ ì„ íƒí•œ ì€í–‰ì˜ íšŒì› ìˆ˜(6ì¼ë•Œ 6ë²ˆì§¸ ì¸ë±ìŠ¤ê°€ ì‹ ê·œ íšŒì› ìë¦¬)
 					Bank temp = arrBank[choice - 1][arUserCnt[choice - 1]];
 
 					temp.name = name;
@@ -112,93 +112,93 @@ public class ATM {
 					temp.pw = pw;
 					temp.phone = phone;
 
-					System.out.println("¡ÚÃàÇÏÇÕ´Ï´Ù¡Ù");
-					System.out.println(name + "´ÔÀÇ °èÁÂ¹øÈ£ : " + account);
-					System.out.println("ÀÌÁ¦ºÎÅÍ Á¤»ó ÀÌ¿ë °¡´ÉÇÕ´Ï´Ù^^");
+					System.out.println("â˜…ì¶•í•˜í•©ë‹ˆë‹¤â˜†");
+					System.out.println(name + "ë‹˜ì˜ ê³„ì¢Œë²ˆí˜¸ : " + account);
+					System.out.println("ì´ì œë¶€í„° ì •ìƒ ì´ìš© ê°€ëŠ¥í•©ë‹ˆë‹¤^^");
 					
-					// °³¼³ ¿Ï·á½Ã ÇØ´ç ÀºÇà È¸¿ø ¼ö 1Áõ°¡
+					// ê°œì„¤ ì™„ë£Œì‹œ í•´ë‹¹ ì€í–‰ íšŒì› ìˆ˜ 1ì¦ê°€
 					arUserCnt[choice - 1]++;
 					break;
 					
-				// °èÁÂ¹øÈ£¿Í ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇØ¾ß ÀÔ±İ°ú Ãâ±İ, ÀÜ¾× ¼­ºñ½º¸¦ ÀÌ¿ëÇÒ ¼ö ÀÖ´Ù.
-				// ÀÔ±İÇÏ±â
+				// ê³„ì¢Œë²ˆí˜¸ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì•¼ ì…ê¸ˆê³¼ ì¶œê¸ˆ, ì”ì•¡ ì„œë¹„ìŠ¤ë¥¼ ì´ìš©í•  ìˆ˜ ìˆë‹¤.
+				// ì…ê¸ˆí•˜ê¸°
 				case 2:
-					System.out.print("°èÁÂ¹øÈ£ : ");
+					System.out.print("ê³„ì¢Œë²ˆí˜¸ : ");
 					account = sc.next();
 					
-					System.out.print("ºñ¹Ğ¹øÈ£ : ");
+					System.out.print("ë¹„ë°€ë²ˆí˜¸ : ");
 					pw = sc.next();
 					
-					// arUserCnt[choice - 1] : ÇØ´ç ÀºÇàÀÇ È¸¿ø¸¸Å­¸¸ ¹İº¹
+					// arUserCnt[choice - 1] : í•´ë‹¹ ì€í–‰ì˜ íšŒì›ë§Œí¼ë§Œ ë°˜ë³µ
 					for(int i = 0; i < arUserCnt[choice - 1]; i++) {
-						// ·Î±×ÀÎ °Ë»ç
+						// ë¡œê·¸ì¸ ê²€ì‚¬
 						if(arrBank[choice - 1][i].account.equals(account)
 								&& arrBank[choice - 1][i].pw.equals(pw)) {
-							// ·Î±×ÀÎ ¼º°ø½Ã check´Â true
+							// ë¡œê·¸ì¸ ì„±ê³µì‹œ checkëŠ” true
 							check = true; 
-							System.out.print("ÀÔ±İ¾× : ");
+							System.out.print("ì…ê¸ˆì•¡ : ");
 							arrBank[choice - 1][i].deposit(sc.nextInt());
-							// ÀÔ±İ ÈÄ ÇöÀç ÀÜ¾×Ç¥½Ã
-							System.out.println("ÇöÀç ÀÜ¾×Àº " + arrBank[choice - 1][i].money + "¿ø");
+							// ì…ê¸ˆ í›„ í˜„ì¬ ì”ì•¡í‘œì‹œ
+							System.out.println("í˜„ì¬ ì”ì•¡ì€ " + arrBank[choice - 1][i].money + "ì›");
 							break;
 						}
 					}
 					if(!check) {
-						System.out.println("°èÁÂ¹øÈ£ È¤Àº ºñ¹Ğ¹øÈ£¸¦ È®ÀÎÇØÁÖ¼¼¿ä");
+						System.out.println("ê³„ì¢Œë²ˆí˜¸ í˜¹ì€ ë¹„ë°€ë²ˆí˜¸ë¥¼ í™•ì¸í•´ì£¼ì„¸ìš”");
 					}
 					break;
-				// Ãâ±İÇÏ±â
+				// ì¶œê¸ˆí•˜ê¸°
 				case 3:
-					System.out.print("°èÁÂ¹øÈ£ : ");
+					System.out.print("ê³„ì¢Œë²ˆí˜¸ : ");
 					account = sc.next();
 					
-					System.out.print("ºñ¹Ğ¹øÈ£ : ");
+					System.out.print("ë¹„ë°€ë²ˆí˜¸ : ");
 					pw = sc.next();
 					
-					// arUserCnt[choice - 1] : ÇØ´ç ÀºÇàÀÇ È¸¿ø¸¸Å­¸¸ ¹İº¹
+					// arUserCnt[choice - 1] : í•´ë‹¹ ì€í–‰ì˜ íšŒì›ë§Œí¼ë§Œ ë°˜ë³µ
 					for(int i = 0; i < arUserCnt[choice - 1]; i++) {
-						// ·Î±×ÀÎ °Ë»ç
+						// ë¡œê·¸ì¸ ê²€ì‚¬
 						if(arrBank[choice - 1][i].account.equals(account)
 								&& arrBank[choice - 1][i].pw.equals(pw)) {
-							// ·Î±×ÀÎ ¼º°ø½Ã check´Â true
+							// ë¡œê·¸ì¸ ì„±ê³µì‹œ checkëŠ” true
 							check = true; 
-							System.out.print("Ãâ±İ¾× : ");
+							System.out.print("ì¶œê¸ˆì•¡ : ");
 							if(arrBank[choice - 1][i].withdraw(sc.nextInt())) {
-								// Ãâ±İ ÈÄ ÇöÀç ÀÜ¾×Ç¥½Ã
-								System.out.println("ÇöÀç ÀÜ¾×Àº " + arrBank[choice - 1][i].money + "¿ø");
+								// ì¶œê¸ˆ í›„ í˜„ì¬ ì”ì•¡í‘œì‹œ
+								System.out.println("í˜„ì¬ ì”ì•¡ì€ " + arrBank[choice - 1][i].money + "ì›");
 							} else {
-								System.out.println("Ãâ±İ ½ÇÆĞ / ÀÜ¾× ºÎÁ·");
+								System.out.println("ì¶œê¸ˆ ì‹¤íŒ¨ / ì”ì•¡ ë¶€ì¡±");
 							}
 							break;
 						}
 					}
 					if(!check) {
-						System.out.println("°èÁÂ¹øÈ£ È¤Àº ºñ¹Ğ¹øÈ£¸¦ È®ÀÎÇØÁÖ¼¼¿ä");
+						System.out.println("ê³„ì¢Œë²ˆí˜¸ í˜¹ì€ ë¹„ë°€ë²ˆí˜¸ë¥¼ í™•ì¸í•´ì£¼ì„¸ìš”");
 					}
 					break;
-				// ÀÜ¾×Á¶È¸
+				// ì”ì•¡ì¡°íšŒ
 				case 4:
-					System.out.print("°èÁÂ¹øÈ£ : ");
+					System.out.print("ê³„ì¢Œë²ˆí˜¸ : ");
 					account = sc.next();
 					
-					System.out.print("ºñ¹Ğ¹øÈ£ : ");
+					System.out.print("ë¹„ë°€ë²ˆí˜¸ : ");
 					pw = sc.next();
 					
-					// arUserCnt[choice - 1] : ÇØ´ç ÀºÇàÀÇ È¸¿ø¸¸Å­¸¸ ¹İº¹
+					// arUserCnt[choice - 1] : í•´ë‹¹ ì€í–‰ì˜ íšŒì›ë§Œí¼ë§Œ ë°˜ë³µ
 					for(int i = 0; i < arUserCnt[choice - 1]; i++) {
-						// ·Î±×ÀÎ °Ë»ç
+						// ë¡œê·¸ì¸ ê²€ì‚¬
 						if(arrBank[choice - 1][i].account.equals(account)
 								&& arrBank[choice - 1][i].pw.equals(pw)) {
-							// ·Î±×ÀÎ ¼º°ø½Ã check´Â true
+							// ë¡œê·¸ì¸ ì„±ê³µì‹œ checkëŠ” true
 							check = true; 
-							System.out.println("¿¹±İÁÖ : " + arrBank[choice - 1][i].name);
-							System.out.println("°èÁÂ¹øÈ£ : " + arrBank[choice - 1][i].account);
-							System.out.println("ÇöÀç ÀÜ¾×Àº " + arrBank[choice - 1][i].showBalance() + "¿ø");
+							System.out.println("ì˜ˆê¸ˆì£¼ : " + arrBank[choice - 1][i].name);
+							System.out.println("ê³„ì¢Œë²ˆí˜¸ : " + arrBank[choice - 1][i].account);
+							System.out.println("í˜„ì¬ ì”ì•¡ì€ " + arrBank[choice - 1][i].showBalance() + "ì›");
 							break;
 						}
 					}
 					if(!check) {
-						System.out.println("°èÁÂ¹øÈ£ È¤Àº ºñ¹Ğ¹øÈ£¸¦ È®ÀÎÇØÁÖ¼¼¿ä");
+						System.out.println("ê³„ì¢Œë²ˆí˜¸ í˜¹ì€ ë¹„ë°€ë²ˆí˜¸ë¥¼ í™•ì¸í•´ì£¼ì„¸ìš”");
 					}
 					break;
 				default:

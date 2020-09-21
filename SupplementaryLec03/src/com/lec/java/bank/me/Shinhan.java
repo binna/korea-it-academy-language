@@ -1,7 +1,7 @@
 package com.lec.java.bank.me;
 
 public class Shinhan extends Bank {
-	// ÀÔ±Ý½Ã ¼ö¼ö·á 50%
+	// ìž…ê¸ˆì‹œ ìˆ˜ìˆ˜ë£Œ 50%
 	@Override
 	public void deposit(int money) {
 		this.money += (money - money * 0.5);

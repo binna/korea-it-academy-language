@@ -1,7 +1,7 @@
 package com.lec.java.bank.me;
 
 public class Woori extends Bank{
-	// ÀÜ¾× Á¶È¸½Ã ¼ö¼ö·á ÀüÀç»ê ¹ÝÅä¸·
+	// ìž”ì•¡ ì¡°íšŒì‹œ ìˆ˜ìˆ˜ë£Œ ì „ìž¬ì‚° ë°˜í† ë§‰
 	@Override
 	public int showBalance() {
 		this.money -= (this.money * 0.5);

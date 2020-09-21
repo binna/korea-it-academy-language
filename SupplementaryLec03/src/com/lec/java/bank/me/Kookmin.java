@@ -1,7 +1,7 @@
 package com.lec.java.bank.me;
 
 public class Kookmin extends Bank {
-	// Ãâ±Ý½Ã ¼ö¼ö·á 50%
+	// ì¶œê¸ˆì‹œ ìˆ˜ìˆ˜ë£Œ 50%
 	@Override
 	public boolean withdraw(int money) {
 		if((money * 0.5 + money) - this.money <= 0) {
