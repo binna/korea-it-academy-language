@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class ArrayListTaskMe {
 	
 	public static void main(String[] args) {
-		// ¹®Á¦
-		// 1. 10 ´ÙÀ½¿¡ 15¸¦ ³Ö´Â´Ù.
-		// 2. 60À» 600À¸·Î º¯°æÇÑ´Ù.
-		// 3. 15¸¦ Áö¿î´Ù.
-		System.out.println("Ã¹¹øÂ° ¹®Ç®===========================================");
+		// ë¬¸ì œ
+		// 1. 10 ë‹¤ìŒì— 15ë¥¼ ë„£ëŠ”ë‹¤.
+		// 2. 60ì„ 600ìœ¼ë¡œ ë³€ê²½í•œë‹¤.
+		// 3. 15ë¥¼ ì§€ìš´ë‹¤.
+		System.out.println("ì²«ë²ˆì§¸ ë¬¸í’€===========================================");
 		ArrayList<Integer> dataList1 =  new ArrayList<>();
 		dataList1.add(10);
 		dataList1.add(80);
@@ -21,28 +21,28 @@ public class ArrayListTaskMe {
 		dataList1.add(60);
 		System.out.println("dataList1 : " + dataList1);
 		
-		// 1. 10 ´ÙÀ½¿¡ 15¸¦ ³Ö´Â´Ù.
+		// 1. 10 ë‹¤ìŒì— 15ë¥¼ ë„£ëŠ”ë‹¤.
 		int index = dataList1.indexOf(10);
 		if(!(index == -1)) {
 			dataList1.add((index + 1), 15);
 		}
 		System.out.println(dataList1);
 		
-		// 2. 60À» 600À¸·Î º¯°æÇÑ´Ù.
+		// 2. 60ì„ 600ìœ¼ë¡œ ë³€ê²½í•œë‹¤.
 		index = dataList1.indexOf(60);
 		if(!(index == -1)) {
 			dataList1.set(index, 600); 
 		}
 		System.out.println(dataList1);
 		
-		// 3. 15¸¦ Áö¿î´Ù.
+		// 3. 15ë¥¼ ì§€ìš´ë‹¤.
 		index = dataList1.indexOf(15);
 		if(!(index == -1)) {
 			dataList1.remove(index);
 		}
 		System.out.println(dataList1);
 		
-		System.out.println("\nµÎ¹øÂ° ¹®Ç®(°Ë»ö °á°ú°¡ ¿©·¯ °³ÀÏ ¶§)==========================");
+		System.out.println("\në‘ë²ˆì§¸ ë¬¸í’€(ê²€ìƒ‰ ê²°ê³¼ê°€ ì—¬ëŸ¬ ê°œì¼ ë•Œ)==========================");
 		ArrayList<Integer> dataList2 =  new ArrayList<>();
 		dataList2.add(10);
 		dataList2.add(80);
@@ -58,7 +58,7 @@ public class ArrayListTaskMe {
 		dataList2.add(60);
 		System.out.println("dataList2 : " + dataList2);
 		
-		// 1. 10 ´ÙÀ½¿¡ 15¸¦ ³Ö´Â´Ù.
+		// 1. 10 ë‹¤ìŒì— 15ë¥¼ ë„£ëŠ”ë‹¤.
 		for(int i = 0; i < dataList2.size(); i++) {
 			if(dataList2.get(i) == 10) {
 				dataList2.add((i + 1), 15);
@@ -66,7 +66,7 @@ public class ArrayListTaskMe {
 		}
 		System.out.println(dataList2);
 		
-		// 2. 60À» 600À¸·Î º¯°æÇÑ´Ù.
+		// 2. 60ì„ 600ìœ¼ë¡œ ë³€ê²½í•œë‹¤.
 		for(int i = 0; i < dataList2.size(); i++) {
 			if(dataList2.get(i) == 60) {
 				dataList2.set(i, 600);
@@ -74,7 +74,7 @@ public class ArrayListTaskMe {
 		}
 		System.out.println(dataList2);
 		
-		// 3. 15¸¦ Áö¿î´Ù.
+		// 3. 15ë¥¼ ì§€ìš´ë‹¤.
 		for(int i = 0; i < dataList2.size(); i++) {
 			if(dataList2.get(i) == 15) {
 				dataList2.remove(i);
@@ -82,7 +82,7 @@ public class ArrayListTaskMe {
 		}
 		System.out.println(dataList2);
 		
-		System.out.println("\nremove(int index)¸»°í remove(Object O) ¸Ş¼­µå ÀÌ¿ëÇÏ±â===");
+		System.out.println("\nremove(int index)ë§ê³  remove(Object O) ë©”ì„œë“œ ì´ìš©í•˜ê¸°===");
 		dataList2.add(90);
 		dataList2.add(90);
 		dataList2.add(90);
@@ -90,7 +90,7 @@ public class ArrayListTaskMe {
 		while(dataList2.remove((Integer)90)) {;}
 		System.out.println(dataList2);
 		
-		System.out.println("\nÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("\ní”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 	}
 
 }

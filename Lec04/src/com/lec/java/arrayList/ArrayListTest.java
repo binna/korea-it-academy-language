@@ -6,8 +6,8 @@ import java.util.Collections;
 public class ArrayListTest {
 
 	public static void main(String[] args) {
-		// ArrayList´Â ÁÖ·Î Á¢¹Ì»ç¿¡ List¸¦ ºÙÀÌ°Å³ª º¹¼öÇüÀ¸·Î ¸¸µê.
-		// ¿¹) dataList È¤Àº datas
+		// ArrayListëŠ” ì£¼ë¡œ ì ‘ë¯¸ì‚¬ì— Listë¥¼ ë¶™ì´ê±°ë‚˜ ë³µìˆ˜í˜•ìœ¼ë¡œ ë§Œë“¦.
+		// ì˜ˆ) dataList í˜¹ì€ datas
 		ArrayList<Integer> dataList = new ArrayList<>();
 		
 		System.out.println("dataList.size() : " + dataList.size());
@@ -20,17 +20,17 @@ public class ArrayListTest {
 		dataList.add(40);
 		System.out.println("dataList.size() : " + dataList.size());
 		
-		// for¹®À» ÀÌ¿ëÇÏ¿© Ãâ·ÂÇÏ±â
+		// forë¬¸ì„ ì´ìš©í•˜ì—¬ ì¶œë ¥í•˜ê¸°
 		for(int i = 0; i < dataList.size(); i++) {
 			System.out.println(dataList.get(i));
 		}
-		// for¹®À» ÀÌ¿ëÇÏ¿© Ãâ·ÂÇØµµ µÇ³ª 
-		// ÄÃ·º¼ÇÀº toString()À» ÀçÁ¤ÀÇÇß±â ¶§¹®¿¡ 
-		// À§¿¡ ¹ø°Å·Î¿î for¹® ´ë½Å toString()¸¦ »ç¿ëÇÏ¸é Æí¸®ÇÏ°Ô Ãâ·ÂÇÒ ¼ö ÀÖ´Ù.
+		// forë¬¸ì„ ì´ìš©í•˜ì—¬ ì¶œë ¥í•´ë„ ë˜ë‚˜ 
+		// ì»¬ë ‰ì…˜ì€ toString()ì„ ì¬ì •ì˜í–ˆê¸° ë•Œë¬¸ì— 
+		// ìœ„ì— ë²ˆê±°ë¡œìš´ forë¬¸ ëŒ€ì‹  toString()ë¥¼ ì‚¬ìš©í•˜ë©´ í¸ë¦¬í•˜ê²Œ ì¶œë ¥í•  ìˆ˜ ìˆë‹¤.
 		System.out.println(dataList);
 		
-		// Collection : ÀÎÅÍÆäÀÌ½º
-		// Collections : Å¬·¡½º
+		// Collection : ì¸í„°í˜ì´ìŠ¤
+		// Collections : í´ë˜ìŠ¤
 		Collections.sort(dataList);
 		System.out.println(dataList);
 		

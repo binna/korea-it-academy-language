@@ -7,10 +7,10 @@ import java.util.function.UnaryOperator;
 public class ArrayListTaskTeacher {
 
 	public static void main(String[] args) {
-		// ¹®Á¦
-		// 1. 10 ´ÙÀ½¿¡ 15¸¦ ³Ö´Â´Ù.
-		// 2. 60À» 600À¸·Î º¯°æÇÑ´Ù.
-		// 3. 15¸¦ Áö¿î´Ù.
+		// ë¬¸ì œ
+		// 1. 10 ë‹¤ìŒì— 15ë¥¼ ë„£ëŠ”ë‹¤.
+		// 2. 60ì„ 600ìœ¼ë¡œ ë³€ê²½í•œë‹¤.
+		// 3. 15ë¥¼ ì§€ìš´ë‹¤.
 		ArrayList<Integer> dataList = new ArrayList<>();
 		
 		dataList.add(10);
@@ -24,38 +24,38 @@ public class ArrayListTaskTeacher {
 		
 		Collections.shuffle(dataList);
 		System.out.println(dataList);
-		// 1. 10 ´ÙÀ½¿¡ 15¸¦ ³Ö´Â´Ù.
+		// 1. 10 ë‹¤ìŒì— 15ë¥¼ ë„£ëŠ”ë‹¤.
 		if(dataList.contains(10)) {
-			// ¿ø·¡ ¿©±â¿¡¼­ ¹è¿­ °°Àº °æ¿ì´Â ¸¶Áö¸· ¹æ¿¡¼­ +1 µÚ¿¡ °ªÀ» ´ëÀÔÇÏ·Á¸é IndexOutOfBoundsException ¿¡·¯°¡ ¹ß»ıÇÑ´Ù.
-			// ÇÏÁö¸¸, ArrayListÀÇ add(index, element)´Â ¸¶Áö¸· ¹æ¿¡¼­ +1 ÃÊ°úÇØµµ ¿¡·¯ ¹ß»ı ¾øÀÌ Ãß°¡ µÈ´Ù.
-			// ´ë½Å ¸¶Áö¸· ¹æ¿¡¼­ +2 ÃÊ°úÇÏ¸é ¿¡·¯ ¹ß»ı!
+			// ì›ë˜ ì—¬ê¸°ì—ì„œ ë°°ì—´ ê°™ì€ ê²½ìš°ëŠ” ë§ˆì§€ë§‰ ë°©ì—ì„œ +1 ë’¤ì— ê°’ì„ ëŒ€ì…í•˜ë ¤ë©´ IndexOutOfBoundsException ì—ëŸ¬ê°€ ë°œìƒí•œë‹¤.
+			// í•˜ì§€ë§Œ, ArrayListì˜ add(index, element)ëŠ” ë§ˆì§€ë§‰ ë°©ì—ì„œ +1 ì´ˆê³¼í•´ë„ ì—ëŸ¬ ë°œìƒ ì—†ì´ ì¶”ê°€ ëœë‹¤.
+			// ëŒ€ì‹  ë§ˆì§€ë§‰ ë°©ì—ì„œ +2 ì´ˆê³¼í•˜ë©´ ì—ëŸ¬ ë°œìƒ!
 			dataList.add(dataList.indexOf(10) + 1, 15);
 			System.out.println(dataList);
 		} else {
-			System.out.println("Ã£À¸½Ã´Â °ªÀÌ ¾ø½À´Ï´Ù.");
+			System.out.println("ì°¾ìœ¼ì‹œëŠ” ê°’ì´ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		
-		// 2. 60À» 600À¸·Î º¯°æÇÑ´Ù.
+		// 2. 60ì„ 600ìœ¼ë¡œ ë³€ê²½í•œë‹¤.
 		if(dataList.contains(60)) {
 			dataList.set(dataList.indexOf(60), 600);
 			System.out.println(dataList);
 		} else {
-			System.out.println("Ã£À¸½Ã´Â °ªÀÌ ¾ø½À´Ï´Ù.");
+			System.out.println("ì°¾ìœ¼ì‹œëŠ” ê°’ì´ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		
-		// 3. 15¸¦ Áö¿î´Ù.
+		// 3. 15ë¥¼ ì§€ìš´ë‹¤.
 		if(dataList.contains(15)) {
-			// 1) remove(int index)¸¦ ÀÌ¿ëÇÏ¿© Áö¿ì±â
+			// 1) remove(int index)ë¥¼ ì´ìš©í•˜ì—¬ ì§€ìš°ê¸°
 			//dataList.remove(dataList.indexOf(15));
-			// 2) remove(Object o)¸¦ ÀÌ¿ëÇÏ¿© Áö¿ì±â
+			// 2) remove(Object o)ë¥¼ ì´ìš©í•˜ì—¬ ì§€ìš°ê¸°
 			dataList.remove(new Integer(15));
 			System.out.println(dataList);
 		} else {
-			System.out.println("Ã£À¸½Ã´Â °ªÀÌ ¾ø½À´Ï´Ù.");
+			System.out.println("ì°¾ìœ¼ì‹œëŠ” ê°’ì´ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		
 		// ====================================================
-		System.out.println("\nreplaceAll() ¸Ş¼­µå »ç¿ëÇØº¸±â");
+		System.out.println("\nreplaceAll() ë©”ì„œë“œ ì‚¬ìš©í•´ë³´ê¸°");
 		dataList.replaceAll(new UnaryOperator<Integer>() {
 
 			@Override
@@ -65,6 +65,6 @@ public class ArrayListTaskTeacher {
 			
 		});
 		System.out.println(dataList);
-		
 	}
+	
 }
