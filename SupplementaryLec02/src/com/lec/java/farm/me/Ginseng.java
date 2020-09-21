@@ -1,6 +1,6 @@
 package com.lec.java.farm.me;
 
-// ภฮป๏
+// ์ธ์ผ
 public class Ginseng extends Potato {
 	int ginseng = 0;
 	

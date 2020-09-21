@@ -1,6 +1,6 @@
 package com.lec.java.farm.teacher;
 
-// ภฮป๏
+// ์ธ์ผ
 public class Ginseng extends Plant {
 
 	public Ginseng(int cnt, String name, long time) {

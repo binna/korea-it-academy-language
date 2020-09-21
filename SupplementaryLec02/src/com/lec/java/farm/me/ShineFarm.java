@@ -5,31 +5,31 @@ import java.util.Scanner;
 public class ShineFarm {
 	
 	public static void main(String[] args) {
-		String mainMsg = "shineFarm ³óÀå¿¡ ¿À½Å °ÍÀ» È¯¿µÇÕ´Ï´Ù.\n"
-				+ "[ÀÛ¹°À» Àç¹èÇØ¼­ ´Ù¾çÇÑ »óÇ°À¸·Î ±³È¯ÇÏÀÚ!]";
+		String mainMsg = "shineFarm ë†ì¥ì— ì˜¤ì‹  ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤.\n"
+				+ "[ì‘ë¬¼ì„ ì¬ë°°í•´ì„œ ë‹¤ì–‘í•œ ìƒí’ˆìœ¼ë¡œ êµí™˜í•˜ì!]";
 		
 		System.out.println(mainMsg);
 		
-		// °ÔÀÓ ½ÃÀÛÇÏÀÚ¸¶ÀÚ ¸ğµç ÀÛ¹°ÀÇ Å¬·¡½ºµéÀ» ¸¸µé¾îÁà¾ß ÇÔ
-		// ÇöÀç ¸ğµç Å¬·¡½º°¡ ¿¬¼â »ó¼ÓÁßÀÌ¶ó ÃÖÁ¾ ÀÎ»ï¸¸ »ó¼ÓÇÏ¸é ¸ğµç Å¬·¡½ºÀÇ º¯¼öµéÀÌ »ı±è
+		// ê²Œì„ ì‹œì‘í•˜ìë§ˆì ëª¨ë“  ì‘ë¬¼ì˜ í´ë˜ìŠ¤ë“¤ì„ ë§Œë“¤ì–´ì¤˜ì•¼ í•¨
+		// í˜„ì¬ ëª¨ë“  í´ë˜ìŠ¤ê°€ ì—°ì‡„ ìƒì†ì¤‘ì´ë¼ ìµœì¢… ì¸ì‚¼ë§Œ ìƒì†í•˜ë©´ ëª¨ë“  í´ë˜ìŠ¤ì˜ ë³€ìˆ˜ë“¤ì´ ìƒê¹€
 		Ginseng playItem = new Ginseng();
 		
 		while(true) {
-			System.out.println("1.ÀÛ¹° ¼±ÅÃ\n2.³» ÀÛ¹° º¸±â\n3.»óÁ¡\n4.±×¸¸ÇÏ±â");
+			System.out.println("1.ì‘ë¬¼ ì„ íƒ\n2.ë‚´ ì‘ë¬¼ ë³´ê¸°\n3.ìƒì \n4.ê·¸ë§Œí•˜ê¸°");
 			String choice = new Scanner(System.in).next();
 			
-			// ±×¸¸ÇÏ±â
+			// ê·¸ë§Œí•˜ê¸°
 			if(choice.equals("4")) {
-				System.out.println("±×¸¸µÎ½Ã¸é Áö±İ±îÁö ÇÑ °ÔÀÓ ÀúÀå ¾ÈµË´Ï´Ù.\nÁ¤¸» ±×¸¸µÎ½Ã°Ú½À´Ï±î(¿øÇÏ¸é yes ±âÀÔ)?");
+				System.out.println("ê·¸ë§Œë‘ì‹œë©´ ì§€ê¸ˆê¹Œì§€ í•œ ê²Œì„ ì €ì¥ ì•ˆë©ë‹ˆë‹¤.\nì •ë§ ê·¸ë§Œë‘ì‹œê² ìŠµë‹ˆê¹Œ(ì›í•˜ë©´ yes ê¸°ì…)?");
 				if((new Scanner(System.in).next()).equals("yes"));
 				break;
 			}
 			
 			switch(choice) {
-			// ÀÛ¹° ¼±ÅÃ
+			// ì‘ë¬¼ ì„ íƒ
 			case "1":
-				System.out.println("Å°¿ì°í ½ÍÀº ÀÛ¹°Àº ±âÀÔÇÏ¼¼¿ä.");
-				System.out.println("1.²É\n2.Åä¸¶Åä\n3.°¨ÀÚ\n4.ÀÎ»ï");
+				System.out.println("í‚¤ìš°ê³  ì‹¶ì€ ì‘ë¬¼ì€ ê¸°ì…í•˜ì„¸ìš”.");
+				System.out.println("1.ê½ƒ\n2.í† ë§ˆí† \n3.ê°ì\n4.ì¸ì‚¼");
 				choice = new Scanner(System.in).next();
 				switch (choice) {
 				case "1":
@@ -40,8 +40,8 @@ public class ShineFarm {
 						playItem.growTomato();
 						playItem.flower -= 2;
 					} else {
-						System.out.println("²ÉÀÌ 2°³ ÀÌ»óÀÏ¶§¸¸ Åä¸¶Åä¸¦ Å°¿ï ¼ö ÀÖ½À´Ï´Ù!");
-						System.out.println("ÇöÀç ²ÉÀÇ °³¼ö : " + playItem.flower);
+						System.out.println("ê½ƒì´ 2ê°œ ì´ìƒì¼ë•Œë§Œ í† ë§ˆí† ë¥¼ í‚¤ìš¸ ìˆ˜ ìˆìŠµë‹ˆë‹¤!");
+						System.out.println("í˜„ì¬ ê½ƒì˜ ê°œìˆ˜ : " + playItem.flower);
 					}
 					break;
 				case "3":
@@ -49,8 +49,8 @@ public class ShineFarm {
 						playItem.growPotato();
 						playItem.tomato -= 5;
 					} else {
-						System.out.println("Åä¸¶Åä°¡ 5°³ ÀÌ»óÀÏ¶§¸¸ °¨ÀÚ¸¦ Å°¿ï ¼ö ÀÖ½À´Ï´Ù!");
-						System.out.println("ÇöÀç Åä¸¶ÅäÀÇ °³¼ö : " + playItem.tomato);
+						System.out.println("í† ë§ˆí† ê°€ 5ê°œ ì´ìƒì¼ë•Œë§Œ ê°ìë¥¼ í‚¤ìš¸ ìˆ˜ ìˆìŠµë‹ˆë‹¤!");
+						System.out.println("í˜„ì¬ í† ë§ˆí† ì˜ ê°œìˆ˜ : " + playItem.tomato);
 					}
 					break;
 				case "4":
@@ -58,72 +58,71 @@ public class ShineFarm {
 						playItem.growGinseng();
 						playItem.potato -= 20;
 					} else {
-						System.out.println("°¨ÀÚ°¡ 20°³ ÀÌ»óÀÏ¶§¸¸ ÀÎ»ïÀ» Å°¿ï ¼ö ÀÖ½À´Ï´Ù!");
-						System.out.println("ÇöÀç °¨ÀÚÀÇ °³¼ö : " + playItem.potato);
+						System.out.println("ê°ìê°€ 20ê°œ ì´ìƒì¼ë•Œë§Œ ì¸ì‚¼ì„ í‚¤ìš¸ ìˆ˜ ìˆìŠµë‹ˆë‹¤!");
+						System.out.println("í˜„ì¬ ê°ìì˜ ê°œìˆ˜ : " + playItem.potato);
 					}
 					break;
 				default:
-					System.out.println("Àß¸øµÈ °ªÀ» ÀÔ·ÂÇÏ¿© ÀÛ¹°À» Å°¿ìÁö ¸øÇß½À´Ï´Ù.");
+					System.out.println("ì˜ëª»ëœ ê°’ì„ ì…ë ¥í•˜ì—¬ ì‘ë¬¼ì„ í‚¤ìš°ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
 					continue;
 				}
 				break;
-			// ³» ÀÛ¹° º¸±â
+			// ë‚´ ì‘ë¬¼ ë³´ê¸°
 			case "2":
-				System.out.println("²É : " + playItem.flower 
-						+ "°³, Åä¸¶Åä : " + playItem.tomato 
-						+  "°³, °¨ÀÚ : " + playItem.potato 
-						+ "°³, ÀÎ»ï : " + playItem.ginseng + "°³");
+				System.out.println("ê½ƒ : " + playItem.flower 
+						+ "ê°œ, í† ë§ˆí†  : " + playItem.tomato 
+						+  "ê°œ, ê°ì : " + playItem.potato 
+						+ "ê°œ, ì¸ì‚¼ : " + playItem.ginseng + "ê°œ");
 				break;
-			// »óÁ¡
+			// ìƒì 
 			case "3":
-				System.out.println("¾î¶² »óÇ°À» ¹Ş°í ½ÍÀ¸½Ê´Ï±î?");
-				System.out.println("1.¹®»ó ¿ÀÃµ¿ø(²É 3°³)\n2.¹®»ó ¸¸¿ø(Åä¸¶Åä 3°³)\n3.¾î¿©»Û ¹İÁö(°¨ÀÚ 3°³)\n4.°ªºñ½Ñ ¸ñ°ÉÀÌ(ÀÎ»ï 3°³)");
+				System.out.println("ì–´ë–¤ ìƒí’ˆì„ ë°›ê³  ì‹¶ìœ¼ì‹­ë‹ˆê¹Œ?");
+				System.out.println("1.ë¬¸ìƒ ì˜¤ì²œì›(ê½ƒ 3ê°œ)\n2.ë¬¸ìƒ ë§Œì›(í† ë§ˆí†  3ê°œ)\n3.ì–´ì—¬ìœ ë°˜ì§€(ê°ì 3ê°œ)\n4.ê°’ë¹„ì‹¼ ëª©ê±¸ì´(ì¸ì‚¼ 3ê°œ)");
 				switch (choice) {
 				case "1":
 					if(playItem.flower >= 3) {
-						System.out.println("¹®»ó ¿ÀÃµ¿ø µæÅÛ! µî·ÏµÈ ÁÖ¼Ò·Î ¹è¼ÛÇØµå¸®°Ú½À´Ï´Ù~! ÃßÄ« ÃßÄ« »£!!!");
+						System.out.println("ë¬¸ìƒ ì˜¤ì²œì› ë“í…œ! ë“±ë¡ëœ ì£¼ì†Œë¡œ ë°°ì†¡í•´ë“œë¦¬ê² ìŠµë‹ˆë‹¤~! ì¶”ì¹´ ì¶”ì¹´ ë¹°!!!");
 						playItem.flower -= 3;
 					} else {
-						System.out.println("ÇöÀç °¡Áö°í °è½Å ²ÉÀÇ °³¼ö´Â " + playItem.flower + "°³ÀÔ´Ï´Ù!\n¸ğ¿ï ¼ö ÀÖµµ·Ï Á» ´õ °ÔÀÓÀ» Áñ°ÜÁÖ¼¼¿ä!");
+						System.out.println("í˜„ì¬ ê°€ì§€ê³  ê³„ì‹  ê½ƒì˜ ê°œìˆ˜ëŠ” " + playItem.flower + "ê°œì…ë‹ˆë‹¤!\nëª¨ìš¸ ìˆ˜ ìˆë„ë¡ ì¢€ ë” ê²Œì„ì„ ì¦ê²¨ì£¼ì„¸ìš”!");
 					}
 					break;
 				case "2":
 					if(playItem.tomato >= 3) {
-						System.out.println("¹®»ó ¸¸¿ø µæÅÛ! µî·ÏµÈ ÁÖ¼Ò·Î ¹è¼ÛÇØµå¸®°Ú½À´Ï´Ù~! ÃßÄ« ÃßÄ« »£!!!");
+						System.out.println("ë¬¸ìƒ ë§Œì› ë“í…œ! ë“±ë¡ëœ ì£¼ì†Œë¡œ ë°°ì†¡í•´ë“œë¦¬ê² ìŠµë‹ˆë‹¤~! ì¶”ì¹´ ì¶”ì¹´ ë¹°!!!");
 						playItem.tomato -= 3;
 					} else {
-						System.out.println("ÇöÀç °¡Áö°í °è½Å Åä¸¶ÅäÀÇ °³¼ö´Â " + playItem.tomato + "°³ÀÔ´Ï´Ù!\n¸ğ¿ï ¼ö ÀÖµµ·Ï Á» ´õ °ÔÀÓÀ» Áñ°ÜÁÖ¼¼¿ä!");
+						System.out.println("í˜„ì¬ ê°€ì§€ê³  ê³„ì‹  í† ë§ˆí† ì˜ ê°œìˆ˜ëŠ” " + playItem.tomato + "ê°œì…ë‹ˆë‹¤!\nëª¨ìš¸ ìˆ˜ ìˆë„ë¡ ì¢€ ë” ê²Œì„ì„ ì¦ê²¨ì£¼ì„¸ìš”!");
 					}
 					break;
 				case "3":
 					if(playItem.potato >= 3) {
-						System.out.println("¾î¿©»Û ¹İÁö µæÅÛ! µî·ÏµÈ ÁÖ¼Ò·Î ¹è¼ÛÇØµå¸®°Ú½À´Ï´Ù~! ÃßÄ« ÃßÄ« »£!!!");
+						System.out.println("ì–´ì—¬ìœ ë°˜ì§€ ë“í…œ! ë“±ë¡ëœ ì£¼ì†Œë¡œ ë°°ì†¡í•´ë“œë¦¬ê² ìŠµë‹ˆë‹¤~! ì¶”ì¹´ ì¶”ì¹´ ë¹°!!!");
 						playItem.potato -= 3;
 					} else {
-						System.out.println("ÇöÀç °¡Áö°í °è½Å °¨ÀÚÀÇ °³¼ö´Â " + playItem.potato + "°³ÀÔ´Ï´Ù!\n¸ğ¿ï ¼ö ÀÖµµ·Ï Á» ´õ °ÔÀÓÀ» Áñ°ÜÁÖ¼¼¿ä!");
+						System.out.println("í˜„ì¬ ê°€ì§€ê³  ê³„ì‹  ê°ìì˜ ê°œìˆ˜ëŠ” " + playItem.potato + "ê°œì…ë‹ˆë‹¤!\nëª¨ìš¸ ìˆ˜ ìˆë„ë¡ ì¢€ ë” ê²Œì„ì„ ì¦ê²¨ì£¼ì„¸ìš”!");
 					}
 					break;
 				case "4":
 					if(playItem.ginseng >= 3) {
-						System.out.println("°ªºñ½Ñ ¸ñ°ÉÀÌ µæÅÛ! µî·ÏµÈ ÁÖ¼Ò·Î ¹è¼ÛÇØµå¸®°Ú½À´Ï´Ù~! ÃßÄ« ÃßÄ« »£!!!");
+						System.out.println("ê°’ë¹„ì‹¼ ëª©ê±¸ì´ ë“í…œ! ë“±ë¡ëœ ì£¼ì†Œë¡œ ë°°ì†¡í•´ë“œë¦¬ê² ìŠµë‹ˆë‹¤~! ì¶”ì¹´ ì¶”ì¹´ ë¹°!!!");
 						playItem.ginseng -= 3;
 					} else {
-						System.out.println("ÇöÀç °¡Áö°í °è½Å ÀÎ»ïÀÇ °³¼ö´Â " + playItem.ginseng + "°³ÀÔ´Ï´Ù!\n¸ğ¿ï ¼ö ÀÖµµ·Ï Á» ´õ °ÔÀÓÀ» Áñ°ÜÁÖ¼¼¿ä!");
+						System.out.println("í˜„ì¬ ê°€ì§€ê³  ê³„ì‹  ì¸ì‚¼ì˜ ê°œìˆ˜ëŠ” " + playItem.ginseng + "ê°œì…ë‹ˆë‹¤!\nëª¨ìš¸ ìˆ˜ ìˆë„ë¡ ì¢€ ë” ê²Œì„ì„ ì¦ê²¨ì£¼ì„¸ìš”!");
 					}
 					break;
 				default:
-					System.out.println("Àß¸ø ÀÔ·ÂÇß½À´Ï´Ù. »óÁ¡À» ³ª°©´Ï´Ù~ ¹ÙÀÌ ¹ÙÀÌ~!");
+					System.out.println("ì˜ëª» ì…ë ¥í–ˆìŠµë‹ˆë‹¤. ìƒì ì„ ë‚˜ê°‘ë‹ˆë‹¤~ ë°”ì´ ë°”ì´~!");
 					continue;
 				}
 				break;
 			default:
-				System.out.println("Àß¸øµÈ °ªÀ» ÀÔ·ÂÇß½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ì˜ëª»ëœ ê°’ì„ ì…ë ¥í–ˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 				continue;
 			} // end switch()
 			
 		}
-		System.out.println("°ÔÀÓÁ¾·á");
-		
+		System.out.println("ê²Œì„ì¢…ë£Œ");
 	} // end main()
 
 } // end class

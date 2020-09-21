@@ -1,19 +1,18 @@
 package com.lec.java.inheritance;
-// ´ÙÇü¼º(Polymorphism) : ¸Þ¼ÒµåÀÇ ¼ºÁú(¸Þ¼ÒµåµéÀÇ ÀÌ¸§Àº ÇÑ °³ÀÌÁö¸¸ ÇüÅÂ°¡ ´Ù¾çÇÑ ¼ºÁú)
-// 1. ¿À¹ö·Îµù(overloading) : ¸Å°³º¯¼öÀÇ °³¼ö È¤Àº Å¸ÀÔÀÌ ´Ù¸£´Ù¸é °°Àº ÀÌ¸§ÀÇ ¸Þ¼Òµå·Î ¼±¾ðÇÒ ¼ö ÀÖ´Ù.
-// 2. ¿À¹ö¶óÀÌµù(overriding) : ºÎ¸ð¿¡¼­ ¼±¾ðµÈ ¸Þ¼Òµå¸¦ ¼öÁ¤ÇØ¾ß ÇÒ ¶§¿¡´Â ÀÚ½Ä¿¡¼­ ¶È°°Àº ÀÌ¸§ÀÇ ¸Þ¼Òµå·Î ¼±¾ðÇÏ¿© ÀçÁ¤ÀÇÇÑ´Ù.
+// ë‹¤í˜•ì„±(Polymorphism) : ë©”ì†Œë“œì˜ ì„±ì§ˆ(ë©”ì†Œë“œë“¤ì˜ ì´ë¦„ì€ í•œ ê°œì´ì§€ë§Œ í˜•íƒœê°€ ë‹¤ì–‘í•œ ì„±ì§ˆ)
+// 1. ì˜¤ë²„ë¡œë”©(overloading) : ë§¤ê°œë³€ìˆ˜ì˜ ê°œìˆ˜ í˜¹ì€ íƒ€ìž…ì´ ë‹¤ë¥´ë‹¤ë©´ ê°™ì€ ì´ë¦„ì˜ ë©”ì†Œë“œë¡œ ì„ ì–¸í•  ìˆ˜ ìžˆë‹¤.
+// 2. ì˜¤ë²„ë¼ì´ë”©(overriding) : ë¶€ëª¨ì—ì„œ ì„ ì–¸ëœ ë©”ì†Œë“œë¥¼ ìˆ˜ì •í•´ì•¼ í•  ë•Œì—ëŠ” ìžì‹ì—ì„œ ë˜‘ê°™ì€ ì´ë¦„ì˜ ë©”ì†Œë“œë¡œ ì„ ì–¸í•˜ì—¬ ìž¬ì •ì˜í•œë‹¤.
 
-// »ó¼Ó(Inheritance)
-// 1. ±âÁ¸¿¡ »ç¿ëÁßÀÎ Å¬·¡½ºÀÇ ÇÊµå¸¦ »ç¿ëÇÏ°í ½ÍÀ» ¶§
-// 2. ¿©·¯ Å¬·¡½º¸¦ ¸¸µé¶§ °øÅëµÈ ÇÊµå°¡ ¸¹ÀÌ ³ªÅ¸³­´Ù¸é,
-//    ºÎ¸ð Å¬·¡½º¸¦ ¸¸µé¾î °øÅëÇÊµå¸¦ ¼±¾ðÇÏ°í °¢ Å¬·¡½º¿¡ »ó¼Ó¹Þ¾Æ »ç¿ëÇÑ´Ù.
+// ìƒì†(Inheritance)
+// 1. ê¸°ì¡´ì— ì‚¬ìš©ì¤‘ì¸ í´ëž˜ìŠ¤ì˜ í•„ë“œë¥¼ ì‚¬ìš©í•˜ê³  ì‹¶ì„ ë•Œ
+// 2. ì—¬ëŸ¬ í´ëž˜ìŠ¤ë¥¼ ë§Œë“¤ë•Œ ê³µí†µëœ í•„ë“œê°€ ë§Žì´ ë‚˜íƒ€ë‚œë‹¤ë©´,
+//    ë¶€ëª¨ í´ëž˜ìŠ¤ë¥¼ ë§Œë“¤ì–´ ê³µí†µí•„ë“œë¥¼ ì„ ì–¸í•˜ê³  ê° í´ëž˜ìŠ¤ì— ìƒì†ë°›ì•„ ì‚¬ìš©í•œë‹¤.
 
-// ÀÚ½ÄÅ¬·¡½º¸í extends ºÎ¸ðÅ¬·¡½º¸í : ºÎ¸ð ÇÊµå¸¦ ¸¶Ä¡ ÀÚ½ÅÀÇ ÇÊµåÃ³·³ »ç¿ëÇÒ ¼ö ÀÖ°Ô µÈ´Ù.
-
-// ºÎ¸ð A
+// ìžì‹í´ëž˜ìŠ¤ëª… extends ë¶€ëª¨í´ëž˜ìŠ¤ëª… : ë¶€ëª¨ í•„ë“œë¥¼ ë§ˆì¹˜ ìžì‹ ì˜ í•„ë“œì²˜ëŸ¼ ì‚¬ìš©í•  ìˆ˜ ìžˆê²Œ ëœë‹¤.
+// ë¶€ëª¨ A
 class A {
 	public A() {
-		System.out.println("ºÎ¸ð»ý¼ºÀÚ È£ÃâµÊ");
+		System.out.println("ï¿½Î¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ï¿½");
 	}
 	
 	int data_a = 100;
@@ -23,17 +22,17 @@ class A {
 	}
 }
 
-// ÀÚ½Ä B
+// ìžì‹ B
 class B extends A {
 	public B() {
-		// ÀÚ½Ä »ý¼ºÀÚ¸¦ È£ÃâÇÏ¸é ºÎ¸ð Å¬·¡½ºÀÇ »ý¼ºÀÚ°¡ È£ÃâµÇ³×...!
-		// super() : ÀÚ½Ä»ý¼ºÀÚ¿¡¼­ ºÎ¸ð Å¬·¡½ºÀÇ »ý¼ºÀÚ¸¦ È£Ãâ
-		// ºÎ¸ðÇÊµå°¡ ¸Þ¸ð¸®¿¡ ¸ðµÎ ÇÒ´çµÈ ´ÙÀ½
-		// ÀÚ½ÄÇÊµå°¡ ÇÒ´çµÈ´Ù
-		// µû¶ó¼­ super() À§¿¡´Â ¾î¶°ÇÑ ¹®Àåµµ »ç¿ëÇØ¼­´Â ¾ÈµÈ´Ù.
-		// ÄÄÆÄÀÏ·¯°¡ ÀÚµ¿ »ý¼ºÇÏ±â ¶§¹®¿¡ super()´Â »ý·« °¡´É
+		// ìžì‹ ìƒì„±ìžë¥¼ í˜¸ì¶œí•˜ë©´ ë¶€ëª¨ í´ëž˜ìŠ¤ì˜ ìƒì„±ìžê°€ í˜¸ì¶œë˜ë„¤...!
+		// super() : ìžì‹ìƒì„±ìžì—ì„œ ë¶€ëª¨ í´ëž˜ìŠ¤ì˜ ìƒì„±ìžë¥¼ í˜¸ì¶œ
+		// ë¶€ëª¨í•„ë“œê°€ ë©”ëª¨ë¦¬ì— ëª¨ë‘ í• ë‹¹ëœ ë‹¤ìŒ
+		// ìžì‹í•„ë“œê°€ í• ë‹¹ëœë‹¤
+		// ë”°ë¼ì„œ super() ìœ„ì—ëŠ” ì–´ë– í•œ ë¬¸ìž¥ë„ ì‚¬ìš©í•´ì„œëŠ” ì•ˆëœë‹¤.
+		// ì»´íŒŒì¼ëŸ¬ê°€ ìžë™ ìƒì„±í•˜ê¸° ë•Œë¬¸ì— super()ëŠ” ìƒëžµ ê°€ëŠ¥
 		super();
-		System.out.println("ÀÚ½Ä»ý¼ºÀÚ È£ÃâµÊ");
+		System.out.println("ìžì‹ìƒì„±ìž í˜¸ì¶œë¨");
 	}
 	
 	int data_b = 50;
@@ -51,10 +50,10 @@ class B extends A {
 public class InheritanceTest {
 	
 	public static void main(String[] args) {
-		// ÀØÁö¸»ÀÚ! ¸Þ¼Òµå´Â ÀúÀå°ø°£ÀÌ´Ù.
-		// ¿À¹ö¶óÀÌµùÀÇ ¿µ¾îÀûÀÎ ¶æÀº ¹«½ÃÇÏ´Ù, ÇÁ·Î±×·¡¹Ö¿¡¼­ÀÇ ¶æÀº ÀçÁ¤ÀÇÀÌ´Ù.
-		
-		// »ó¼Ó¿¡¼­ÀÇ ÇÙ½ÉÀº »ý¼ºÀÚ
+		// ìžŠì§€ë§ìž! ë©”ì†Œë“œëŠ” ì €ìž¥ê³µê°„ì´ë‹¤.
+		// ì˜¤ë²„ë¼ì´ë”©ì˜ ì˜ì–´ì ì¸ ëœ»ì€ ë¬´ì‹œí•˜ë‹¤, í”„ë¡œê·¸ëž˜ë°ì—ì„œì˜ ëœ»ì€ ìž¬ì •ì˜ì´ë‹¤.
+				
+		// ìƒì†ì—ì„œì˜ í•µì‹¬ì€ ìƒì„±ìž
 		B obj_b = new B();
 		
 		obj_b.data_a = 30;

@@ -5,48 +5,48 @@ import java.util.Scanner;
 public class Farm {
 	
 	public static void main(String[] args) {
-		Flower flower = new Flower(0, "Áø´Ş·¡", 3000);
-		Tomato tomato = new Tomato(0, "Åä¸¶Åä", 5000);
-		Potato potato = new Potato(0, "°¨ÀÚ", 10000);
-		Ginseng ginseng = new Ginseng(0, "ÀÎ»ï", 15000);
+		Flower flower = new Flower(0, "ì§„ë‹¬ë˜", 3000);
+		Tomato tomato = new Tomato(0, "í† ë§ˆí† ", 5000);
+		Potato potato = new Potato(0, "ê°ì", 10000);
+		Ginseng ginseng = new Ginseng(0, "ì¸ì‚¼", 15000);
 		
 		// up casting
-		// °¢ °´Ã¼¿¡ ±ÔÄ¢¼ºÀ» ºÎ¿©ÇÏ±â À§ÇØ¼­ »ç¿ëÇÑ´Ù.
+		// ê° ê°ì²´ì— ê·œì¹™ì„±ì„ ë¶€ì—¬í•˜ê¸° ìœ„í•´ì„œ ì‚¬ìš©í•œë‹¤.
 		Plant[] plants = {flower, tomato, potato, ginseng};
 		int[] costs = {2, 5, 20};
 		int choice = 0;
 		
 		while(true) {
-			System.out.println("1.Áø´Ş·¡\n2.Åä¸¶Åä\n3.°¨ÀÚ\n4.ÀÎ»ï");
+			System.out.println("1.ì§„ë‹¬ë˜\n2.í† ë§ˆí† \n3.ê°ì\n4.ì¸ì‚¼");
 			choice = new Scanner(System.in).nextInt();
-			// ²ÉÀÏ¶§
+			// ê½ƒì¼ë•Œ
 			if(choice == 1) {
-				System.out.println("Àç¹èÁß...");
+				System.out.println("ì¬ë°°ì¤‘...");
 				try {Thread.sleep(plants[choice-1].time);} catch (InterruptedException e) {;}
-				// Àç¹è °³¼ö 1 Áõ°¡
+				// ì¬ë°° ê°œìˆ˜ 1 ì¦ê°€
 				plants[choice-1].grow();
-				System.out.println(plants[choice-1].name + " ¿Ï¼º! "
-						+ "ÇöÀç " + plants[choice-1].name + " °³¼ö : " + plants[choice-1].cnt);
+				System.out.println(plants[choice-1].name + " ì™„ì„±! "
+						+ "í˜„ì¬ " + plants[choice-1].name + " ê°œìˆ˜ : " + plants[choice-1].cnt);
 				continue;
 			}
-			// ±× ¿ÜÀÇ ÀÛ¹°ÀÏ¶§
+			// ê·¸ ì™¸ì˜ ì‘ë¬¼ì¼ë•Œ
 			for (int i = 1; i < plants.length; i++) {
-				// »ç¿ëÀÚ°¡ ¼±ÅÃÇÑ ½Ä¹° ÀÏ ¶§ Âü
+				// ì‚¬ìš©ìê°€ ì„ íƒí•œ ì‹ë¬¼ ì¼ ë•Œ ì°¸
 				if(choice - 1 == i) {
-					// Àç¹èÇÒ ¶§ ÇÊ¿äÇÑ Àç·áÀÛ¹°ÀÇ °³¼ö Ã¼Å©
+					// ì¬ë°°í•  ë•Œ í•„ìš”í•œ ì¬ë£Œì‘ë¬¼ì˜ ê°œìˆ˜ ì²´í¬
 					if(plants[i].check(plants[i-1])) {
-						System.out.println("Àç¹èÁß...");
+						System.out.println("ì¬ë°°ì¤‘...");
 						try {Thread.sleep(plants[i].time);} catch (InterruptedException e) {;}
-						// »ç¿ëÀÚ°¡ ¼±ÅÃÇÑ ÀÛ¹°¿¡ ÇÊ¿äÇÑ Àç·á °¨¼Ò
+						// ì‚¬ìš©ìê°€ ì„ íƒí•œ ì‘ë¬¼ì— í•„ìš”í•œ ì¬ë£Œ ê°ì†Œ
 						//System.out.println(plants[i-1].name);
 						//System.out.println(costs[i-1]);
 						plants[i-1].cnt -= costs[i-1];
-						// Àç¹è °³¼ö 1 Áõ°¡
+						// ì¬ë°° ê°œìˆ˜ 1 ì¦ê°€
 						plants[i].grow();
-						System.out.println(plants[i].name + " ¿Ï¼º! "
-								+ "ÇöÀç " + plants[i].name + " °³¼ö : " + plants[i].cnt);
+						System.out.println(plants[i].name + " ì™„ì„±! "
+								+ "í˜„ì¬ " + plants[i].name + " ê°œìˆ˜ : " + plants[i].cnt);
 					}else {
-						System.out.println(plants[i-1].name + "(ÀÌ)°¡ ºÎÁ·ÇØ¿ä ¤Ğ¤Ğ");
+						System.out.println(plants[i-1].name + "(ì´)ê°€ ë¶€ì¡±í•´ìš” ã… ã… ");
 					}
 				}
 			}
