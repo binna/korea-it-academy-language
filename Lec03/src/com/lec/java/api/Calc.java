@@ -1,7 +1,7 @@
 package com.lec.java.api;
 /**
  * 
- * @author �ں�
+ * @author 박빈나
  * @since JDK8
  * <br>Calculator 
  */

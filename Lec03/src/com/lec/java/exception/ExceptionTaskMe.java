@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class ExceptionTaskMe {
 	public static void main(String[] args) {
-		// 5°³ÀÇ Á¤¼ö¸¸ ÀÔ·Â ¹Ş±â
-		// ´Ü 5°³ ÀÌ»óÀÇ Á¤¼öµµ ÀÔ·ÂÀº °¡´ÉÇÏ´Ù
+		// 5ê°œì˜ ì •ìˆ˜ë§Œ ì…ë ¥ ë°›ê¸°
+		// ë‹¨ 5ê°œ ì´ìƒì˜ ì •ìˆ˜ë„ ì…ë ¥ì€ ê°€ëŠ¥í•˜ë‹¤
 		Scanner sc = new Scanner(System.in);
 		
 		int index = 0;
@@ -14,12 +14,12 @@ public class ExceptionTaskMe {
 		while(true) {
 			
 			try {
-				System.out.print("¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä(´Ü, 0À» ÀÔ·ÂÇÏ¸é ÇÁ·Î±×·¥ÀÌ Á¾·áµË´Ï´Ù.) : ");
+				System.out.print("ìˆ«ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”(ë‹¨, 0ì„ ì…ë ¥í•˜ë©´ í”„ë¡œê·¸ë¨ì´ ì¢…ë£Œë©ë‹ˆë‹¤.) : ");
 				arData[index] = sc.nextInt();
 				
 				if(arData[index] == 0) {break;}
 			} catch (Exception e) {
-				System.out.println("5°³¸¦ ÃÊ°úÇÒ ¼ö ¾ø½À´Ï´Ù.\n´õ ÀÌ»ó ÀÔ·ÂÇÒ ¼ö ¾ø½À´Ï´Ù.");
+				System.out.println("5ê°œë¥¼ ì´ˆê³¼í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\në” ì´ìƒ ì…ë ¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 				break;
 			}
 			
@@ -27,7 +27,7 @@ public class ExceptionTaskMe {
 			
 		} // end while()
 		
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 		
 	} // end main()
 	

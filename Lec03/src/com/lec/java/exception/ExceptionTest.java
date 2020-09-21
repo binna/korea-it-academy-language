@@ -4,18 +4,18 @@ public class ExceptionTest {
 
 	public static void main(String[] args) {
 
-		// try catch¹® : try·Î °¨½Ò ¹®Àå ºí·Ï + Alt + Shift + Z
+		// try catchë¬¸ : tryë¡œ ê°ìŒ€ ë¬¸ì¥ ë¸”ë¡ + Alt + Shift + Z
 		try {
 			System.out.println(10/0);
 		} catch (Exception e) {
-			System.out.println("0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			
-			// °´Ã¼¸¦ Ãâ·ÂÇÒ¶§ ¾ğÁ¦³ª toString()ÀÌ »ı·«µÈ °ÍÀÓ
+			// ê°ì²´ë¥¼ ì¶œë ¥í• ë•Œ ì–¸ì œë‚˜ toString()ì´ ìƒëµëœ ê²ƒì„
 			System.out.println(e);
 			System.out.println(e.toString());
 		}
 		
-		System.out.println("¹İµå½Ã Ãâ·ÂµÇ¾î¾ß ÇÏ´Â ¹®Àå");
+		System.out.println("ë°˜ë“œì‹œ ì¶œë ¥ë˜ì–´ì•¼ í•˜ëŠ” ë¬¸ì¥");
 		
 	} // end main()
 	

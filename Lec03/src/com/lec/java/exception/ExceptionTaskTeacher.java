@@ -5,16 +5,16 @@ import java.util.Scanner;
 public class ExceptionTaskTeacher {
 	
 	public static void main(String[] args) {
-		// 5°³ÀÇ Á¤¼ö¸¸ ÀÔ·Â¹Ş±â
-		// ´Ü, 5°³ ÀÌ»óÀÇ Á¤¼öµµ ÀÔ·ÂÀº °¡´ÉÇÏ´Ù.
+		// 5ê°œì˜ ì •ìˆ˜ë§Œ ì…ë ¥ë°›ê¸°
+		// ë‹¨, 5ê°œ ì´ìƒì˜ ì •ìˆ˜ë„ ì…ë ¥ì€ ê°€ëŠ¥í•˜ë‹¤.
 		int[] arData = new int[5];
 		Scanner sc = new Scanner(System.in);
-		String msg = "¹øÂ° Á¤¼ö ÀÔ·Â : ";
+		String msg = "ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : ";
 		
 		int idx = 0;
 		String temp = null;
 		
-		System.out.println("³ª°¡±â : q");
+		System.out.println("ë‚˜ê°€ê¸° : q");
 		
 		while(true) {
 			System.out.print(++idx + msg);
@@ -24,10 +24,10 @@ public class ExceptionTaskTeacher {
 			try {
 				arData[idx - 1] = Integer.parseInt(temp);
 			} catch (NumberFormatException e) {
-				System.out.println("Á¤¼ö¸¸ ÀÔ·ÂÇÏ¼¼¿ä.");
+				System.out.println("ì •ìˆ˜ë§Œ ì…ë ¥í•˜ì„¸ìš”.");
 				idx--;
 			} catch (ArrayIndexOutOfBoundsException e) {
-				System.out.println("´õ ÀÌ»ó Á¤¼ö¸¦ ÀÔ·ÂÇÒ ¼ö ¾ø½À´Ï´Ù.");
+				System.out.println("ë” ì´ìƒ ì •ìˆ˜ë¥¼ ì…ë ¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 				break;
 			}
 		}
