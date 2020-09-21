@@ -8,8 +8,8 @@ public class SetTest {
 	public static void main(String[] args) {
 		// public interface Set<E> extends Collection<E>
 		
-		// ¿Ö SetÀ¸·Î ¼±¾ğÇÏ°í »ı¼ºÀº HashSetÀ¸·Î »ı¼ºÇßÀ»±î?
-		// Up Casting ÀÌ¿ë, HashSet ¸»°íµµ ´Ù¸¥ SetÀ» ÀÌ¿ëÇÒ ¼ö ÀÖ±â ¶§¹®¿¡...!
+		// ì™œ Setìœ¼ë¡œ ì„ ì–¸í•˜ê³  ìƒì„±ì€ HashSetìœ¼ë¡œ ìƒì„±í–ˆì„ê¹Œ?
+		// Up Casting ì´ìš©, HashSet ë§ê³ ë„ ë‹¤ë¥¸ Setì„ ì´ìš©í•  ìˆ˜ ìˆê¸° ë•Œë¬¸ì—...!
 		Set<String> bloodTypeSet = new HashSet<>();
 		
 		bloodTypeSet.add("A");
@@ -32,20 +32,20 @@ public class SetTest {
 		
 		System.out.println(bloodTypeSet.contains("A"));
 		
-		// set¿¡ ¼ø¼­¸¦ ºÎ¿©ÇØ¾ß ²¨³»¿Ã ¼ö ÀÖÀ½, ¼ø¼­¸¦ ºÎ¿©ÇÏ´Â ¼ø°£ ´õÀÌ»ó setÀÌ ¾Æ´Ï´Ù!
-		// setÀÌ ¾Æ´Ï¸é ¹ºµ¥? Iterator<String>ÀÓ.
+		// setì— ìˆœì„œë¥¼ ë¶€ì—¬í•´ì•¼ êº¼ë‚´ì˜¬ ìˆ˜ ìˆìŒ, ìˆœì„œë¥¼ ë¶€ì—¬í•˜ëŠ” ìˆœê°„ ë”ì´ìƒ setì´ ì•„ë‹ˆë‹¤!
+		// setì´ ì•„ë‹ˆë©´ ë­”ë°? Iterator<String>ì„.
 		Iterator<String> iter = bloodTypeSet.iterator();
 		
 		System.out.println(bloodTypeSet.size() + "\n");
 		//System.out.println(iter.next());
 		//System.out.println(iter.next());
 		//System.out.println(iter.next());
-		//System.out.println(iter.next());	// ¿¡·¯ : NoSuchElementException
+		//System.out.println(iter.next());	// ì—ëŸ¬ : NoSuchElementException
 		
-		// ¾È¿¡ ¾ó¸¶³ª µé¾îÀÖ´ÂÁö ÆÄ¾ÇÇÏ±â ¾î·Æ±â ¶§¹®¿¡ 
-		// À§ÀÇ ÄÚµå ¿¡·¯(NoSuchElementException)°¡ ¹ß»ı °¡´É¼ºÀÌ ³ôÀ½
-		// Áï, ¸î ¹øÀ» ¹İº¹ÇØ¾ßÇÒÁö ¸ğ¸¦¶§ ¾Æ·¡ÀÇ ÄÚµå¸¦ ÀÌ¿ëÇÏ¿© Ãâ·ÂÇÏ¸é 
-		// NoSuchElementException ¿¡·¯¸¦ ¿¹¹æ °¡´É
+		// ì•ˆì— ì–¼ë§ˆë‚˜ ë“¤ì–´ìˆëŠ”ì§€ íŒŒì•…í•˜ê¸° ì–´ë µê¸° ë•Œë¬¸ì— 
+		// ìœ„ì˜ ì½”ë“œ ì—ëŸ¬(NoSuchElementException)ê°€ ë°œìƒ ê°€ëŠ¥ì„±ì´ ë†’ìŒ
+		// ì¦‰, ëª‡ ë²ˆì„ ë°˜ë³µí•´ì•¼í• ì§€ ëª¨ë¥¼ë•Œ ì•„ë˜ì˜ ì½”ë“œë¥¼ ì´ìš©í•˜ì—¬ ì¶œë ¥í•˜ë©´ 
+		// NoSuchElementException ì—ëŸ¬ë¥¼ ì˜ˆë°© ê°€ëŠ¥
 		while(iter.hasNext()) {
 			System.out.println(iter.next());
 		}
