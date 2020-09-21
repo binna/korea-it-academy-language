@@ -12,7 +12,7 @@ package com.lec.java.inheritance;
 // 부모 A
 class A {
 	public A() {
-		System.out.println("�θ������ ȣ���");
+		System.out.println("부모생성자 호출됨");
 	}
 	
 	int data_a = 100;
