@@ -5,13 +5,13 @@ public class Tri extends Shape {
 	@Override
 	void getArea(double w, double h) {
 		area = w * h / 2;
-		//¤º + ÇÑÀÚ Å° : Á¦°ö Ã·ÀÚ ¹®ÀÚ Ã£±â
-		System.out.println(area + "cm©÷");
+		//ã…Š + í•œì í‚¤ : ì œê³± ì²¨ì ë¬¸ì ì°¾ê¸°
+		System.out.println(area + "cmÂ²");
 	}
 	
 	@Override
 	public void f() {
-		System.out.println("¼¼¸ğÀÔ´Ï´Ù.");
+		System.out.println("ì„¸ëª¨ì…ë‹ˆë‹¤.");
 	}
 
 } // end class

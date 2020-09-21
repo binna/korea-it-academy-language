@@ -1,13 +1,13 @@
 package com.lec.java.interfaceAdapter;
 
-// ÀÎÅÍÆäÀÌ½º¿¡¼­´Â »ó¼ö¶û Ãß»ó¸Ş¼Òµå¸¸ °¡´É
+//ì¸í„°í˜ì´ìŠ¤ì—ì„œëŠ” ìƒìˆ˜ë‘ ì¶”ìƒë©”ì†Œë“œë§Œ ê°€ëŠ¥
 public interface Animal {
-	// »ó¼ö
-	int leg = 4;			// ÀÎÅÍÆäÀÌ½º¿¡¼­´Â final static »ı·« °¡´É
+	// ìƒìˆ˜
+	int leg = 4;			// ì¸í„°í˜ì´ìŠ¤ì—ì„œëŠ” final static ìƒëµ ê°€ëŠ¥
 	final static int eye = 2;
 	
-	// Ãß»ó¸Ş¼Òµå
-	void eat(String feed);	// ÀÎÅÍÆäÀÌ½º¿¡¼­´Â abstract »ı·« °¡´É
+	// ì¶”ìƒë©”ì†Œë“œ
+	void eat(String feed);	// ì¸í„°í˜ì´ìŠ¤ì—ì„œëŠ” abstract ìƒëµ ê°€ëŠ¥
 	abstract void sleep();
 	void walk();
 }

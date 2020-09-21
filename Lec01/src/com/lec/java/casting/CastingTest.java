@@ -5,10 +5,10 @@ class Car {
 	String color;
 	int price;
 	
-	// ±âº»»ı¼ºÀÚ ¸¸µå´Â ´ÜÃàÅ° : Ctrl + SpaceBar
+	// ê¸°ë³¸ìƒì„±ì ë§Œë“œëŠ” ë‹¨ì¶•í‚¤ : Ctrl + SpaceBar
 	public Car() {}
 
-	// »ı¼ºÀÚ ¸¸µå´Â ´ÜÃàÅ° : Alt + Shift + S + O
+	// ìƒì„±ì ë§Œë“œëŠ” ë‹¨ì¶•í‚¤ : Alt + Shift + S + O
 	public Car(String brand, String color, int price) {
 		super();
 		this.brand = brand;
@@ -17,17 +17,16 @@ class Car {
 	}
 	
 	public void engineStart() {
-		System.out.println("¿­¼è·Î ½Ãµ¿ Å´");
+		System.out.println("ì—´ì‡ ë¡œ ì‹œë™ í‚´");
 	}
 	
 	public void engineStop() {
-		System.out.println("¿­¼è·Î ½Ãµ¿ ²û");
+		System.out.println("ì—´ì‡ ë¡œ ì‹œë™ ë”");
 	}
-	
 } // end class Car
 
 class SuperCar extends Car {
-	String mode;
+String mode;
 	
 	public SuperCar() {}
 
@@ -38,48 +37,46 @@ class SuperCar extends Car {
 	
 	@Override
 	public void engineStart() {
-		super.engineStart();	// ºÎ¸ğ Å¬·¡½ºÀÇ ¸Ş¼Òµå È£Ãâ 
-		System.out.println("À½¼ºÀ¸·Î ½Ãµ¿ Å´");
+		super.engineStart();	// ë¶€ëª¨ í´ë˜ìŠ¤ì˜ ë©”ì†Œë“œ í˜¸ì¶œ 
+		System.out.println("ìŒì„±ìœ¼ë¡œ ì‹œë™ í‚´");
 	}
 	
 	@Override
 	public void engineStop() {
-		// ºÎ¸ğ Å¬·¡½ºÀÇ ¸Ş¼Òµå È£Ãâ¾øÀÌ ÀçÁ¤ÀÇ
-		System.out.println("À½¼ºÀ¸·Î ½Ãµ¿ ²û");
+		// ë¶€ëª¨ í´ë˜ìŠ¤ì˜ ë©”ì†Œë“œ í˜¸ì¶œì—†ì´ ì¬ì •ì˜
+		System.out.println("ìŒì„±ìœ¼ë¡œ ì‹œë™ ë”");
 	}
 	
 	public void openRoof() {
-		System.out.println("ÁöºØ ¿­±â");
+		System.out.println("ì§€ë¶• ì—´ê¸°");
 	}
-	
 } // end class SuperCar
 
 public class CastingTest {
 	
 	public static void main(String[] args) {
-		// Car(ºÎ¸ğ), SuperCar(ÀÚ½Ä)
+		// Car(ë¶€ëª¨), SuperCar(ìì‹)
 		Car matiz = new Car();
 		SuperCar ferrari = new SuperCar();
 		
 		// up casting
 		Car noOptionFerrari = new SuperCar();
 		
-		// ÀÚ½Ä Å¸ÀÔ¿¡ ºÎ¸ğ °ªÀ» ³Ö´Â °ÍÀº ¿À·ù(java.lang.ClassCastException)ÀÌ´Ù. 
-		// ¹İµå½Ã up castingµÈ °´Ã¼¸¦ ÀÚ½Ä Å¸ÀÔ¿¡ ³Ö¾îÁÖ¾î¾ß ÇÑ´Ù.
-		// ÀÌ¶§..! ÄÄÆÄÀÏ»ó ¿À·ù°¡ ³ªÁö ¾Ê°í ºôµå½Ã¿¡ ¿À·ù ¹ß»ı
+		// ìì‹ íƒ€ì…ì— ë¶€ëª¨ ê°’ì„ ë„£ëŠ” ê²ƒì€ ì˜¤ë¥˜(java.lang.ClassCastException)ì´ë‹¤. 
+		// ë°˜ë“œì‹œ up castingëœ ê°ì²´ë¥¼ ìì‹ íƒ€ì…ì— ë„£ì–´ì£¼ì–´ì•¼ í•œë‹¤.
+		// ì´ë•Œ..! ì»´íŒŒì¼ìƒ ì˜¤ë¥˜ê°€ ë‚˜ì§€ ì•Šê³  ë¹Œë“œì‹œì— ì˜¤ë¥˜ ë°œìƒ
 		//SuperCar brokenCar = (SuperCar) new Car();
 		
 		//down casting
 		SuperCar fullOptionFerrari = (SuperCar) noOptionFerrari;
 		
-		//¡Ú¡Ú¡Ú¡Ú¡Ú¸ğµç ÀÚ½ÄÀº ºÎ¸ğ Å¸ÀÔÀÌ´Ù.¡Ú¡Ú¡Ú¡Ú¡Ú
+		//â˜…â˜…â˜…â˜…â˜…ëª¨ë“  ìì‹ì€ ë¶€ëª¨ íƒ€ì…ì´ë‹¤.â˜…â˜…â˜…â˜…â˜…
 		System.out.println(ferrari instanceof Car);
 		System.out.println(ferrari instanceof SuperCar);
 		System.out.println(ferrari instanceof Object);
 
 		noOptionFerrari.engineStart();
 		fullOptionFerrari.openRoof();
-		
 	} // end main()
 	
 } // end class CastingTest
