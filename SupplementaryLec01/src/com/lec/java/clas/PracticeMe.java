@@ -1,9 +1,9 @@
 package com.lec.java.clas;
 
 class Car {
-	/* °´Ã¼(ÀÎ½ºÅÏ½º º¯¼ö) */
-	// ÀÎ½ºÅÏ½º(=°´Ã¼È­), ÀÎ½ºÅÏ½º º¯¼ö(=°´Ã¼)
-	// ºê·£µå, »ö»ó, °¡°İ
+	/* ê°ì²´(ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜) */
+	// ì¸ìŠ¤í„´ìŠ¤(=ê°ì²´í™”), ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜(=ê°ì²´)
+	// ë¸Œëœë“œ, ìƒ‰ìƒ, ê°€ê²©
 	String brand = "";
 	String color = "";
 	int price = 0;
@@ -11,8 +11,8 @@ class Car {
 	String pwd = "1234";
 	int police = 0;
 	
-	/* »ı¼ºÀÚ */
-	// ±âº»»ı¼ºÀÚ, ÃÊ±âÈ­ »ı¼ºÀÚ
+	/* ìƒì„±ì */
+	// ê¸°ë³¸ìƒì„±ì, ì´ˆê¸°í™” ìƒì„±ì
 	public Car() {}
 	public Car(String brand, String color, int price) {
 		super();
@@ -21,22 +21,22 @@ class Car {
 		this.price = price;
 	}
 	
-	/* ¸Ş¼Òµå */
-	// ½Ãµ¿ ÄÑ±â
-	// ÀÌ¹Ì ½Ãµ¿ÀÌ ÄÑÁ®ÀÖ´Ù¸é ÄÑÁ®ÀÖ´Ù°í Ã¼Å©ÇÏ±â
-	// ¸Â´Â ºñ¹Ğ¹øÈ£¸¦ ÀÔ·Â½Ã¿¡¸¸ ½Ãµ¿ÀÌ ÄÑÁø´Ù.
-	// ºñ¹Ğ¹øÈ£ 3È¸ ¿¬¼Ó ¿À·ù½Ã °æÂû Ãâµ¿
+	/* ë©”ì†Œë“œ */
+	// ì‹œë™ ì¼œê¸°
+	// ì´ë¯¸ ì‹œë™ì´ ì¼œì ¸ìˆë‹¤ë©´ ì¼œì ¸ìˆë‹¤ê³  ì²´í¬í•˜ê¸°
+	// ë§ëŠ” ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥ì‹œì—ë§Œ ì‹œë™ì´ ì¼œì§„ë‹¤.
+	// ë¹„ë°€ë²ˆí˜¸ 3íšŒ ì—°ì† ì˜¤ë¥˜ì‹œ ê²½ì°° ì¶œë™
 	void engineStart(String pwd) {
 		if(engine) {
-			System.out.println("ÀÌ¹Ì ¿£ÁøÀÌ ÄÑÁ® ÀÖ½À´Ï´Ù.");
+			System.out.println("ì´ë¯¸ ì—”ì§„ì´ ì¼œì ¸ ìˆìŠµë‹ˆë‹¤.");
 		} else {
 			if(pwd.equals(this.pwd)) {
-				System.out.println("½Ãµ¿ ÄÑ±â");
+				System.out.println("ì‹œë™ ì¼œê¸°");
 				engine = true;
 				police = 0;
 			} else {
 				if(police >= 3) {
-					System.out.println("°æÂû Ãâµ¿!");
+					System.out.println("ê²½ì°° ì¶œë™!");
 				} else {
 					police++;
 				}
@@ -44,14 +44,14 @@ class Car {
 		}
 	} // end engineStart()
 	
-	// ½Ãµ¿ ²ô±â
-	// ÀÌ¹Ì ½Ãµ¿ÀÌ ²¨Á®ÀÖ´Ù¸é ²¨Á®ÀÖ´Ù°í Ã¼Å©ÇÏ±â
+	// ì‹œë™ ë„ê¸°
+	// ì´ë¯¸ ì‹œë™ì´ êº¼ì ¸ìˆë‹¤ë©´ êº¼ì ¸ìˆë‹¤ê³  ì²´í¬í•˜ê¸°
 	void enginStop() {
 		if(engine) {
-			System.out.println("½Ãµ¿ ²ô±â");
+			System.out.println("ì‹œë™ ë„ê¸°");
 			engine = false;
 		} else {
-			System.out.println("ÀÌ¹Ì ½Ãµ¿ÀÌ ²¨Á® ÀÖ½À´Ï´Ù.");
+			System.out.println("ì´ë¯¸ ì‹œë™ì´ êº¼ì ¸ ìˆìŠµë‹ˆë‹¤.");
 		}
 	} // end enginStop()
 } // end Car class

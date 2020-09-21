@@ -3,15 +3,15 @@ package com.lec.java.clas;
 import java.util.Scanner;
 
 class CarTeacher {
-	/* °´Ã¼(=ÀÎ½ºÅÏ½º º¯¼ö) */
+	/* ê°ì²´(=ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜) */
 	String brand;
 	String color;
 	int price;
 	String pw = "0000";
-	boolean check;		// booleanÀÇ ÃÊ±â°ªÀº false
+	boolean check;		// booleanì˜ ì´ˆê¸°ê°’ì€ false
 	int policeCnt;
 	
-	// ±âº» »ı¼ºÀÚ, ÃÊ±âÈ­ »ı¼ºÀÚ
+	// ê¸°ë³¸ ìƒì„±ì, ì´ˆê¸°í™” ìƒì„±ì
 	public CarTeacher() {}
 	public CarTeacher(String brand, String color, int price) {
 		super();
@@ -27,11 +27,11 @@ class CarTeacher {
 		this.pw = pw;
 	}
 	
-	/* ¸Ş¼Òµå */
-	// ½Ãµ¿ ÄÑ±â
-	// ÀÌ¹Ì ½Ãµ¿ÀÌ ÄÑÁ®ÀÖ´Ù¸é ÄÑÁ® ÀÖ´Ù°í Ã¼Å©ÇÏ±â
-	// ¸Â´Â ºñ¹Ğ¹øÈ£ ÀÔ·Â ½Ã¿¡¸¸ ½Ãµ¿ÀÌ ÄÑÁø´Ù.
-	// ºñ¹Ğ¹øÈ£ 3È¸ ¿¬¼Ó ¿À·ù½Ã °æÂû Ãâµ¿!
+	/* ë©”ì†Œë“œ */
+	// ì‹œë™ ì¼œê¸°
+	// ì´ë¯¸ ì‹œë™ì´ ì¼œì ¸ìˆë‹¤ë©´ ì¼œì ¸ ìˆë‹¤ê³  ì²´í¬í•˜ê¸°
+	// ë§ëŠ” ë¹„ë°€ë²ˆí˜¸ ì…ë ¥ ì‹œì—ë§Œ ì‹œë™ì´ ì¼œì§„ë‹¤.
+	// ë¹„ë°€ë²ˆí˜¸ 3íšŒ ì—°ì† ì˜¤ë¥˜ì‹œ ê²½ì°° ì¶œë™!
 	public boolean engineStart() {
 		if(!this.check) {
 			return true;
@@ -44,12 +44,12 @@ class CarTeacher {
 			this.check = true;
 			policeCnt = 0;
 		} else {
-			// ºñ¹Ğ¹øÈ£ ¿À·ù
+			// ë¹„ë°€ë²ˆí˜¸ ì˜¤ë¥˜
 			policeCnt++;
 		}
 	} // end check()
 	
-	// ½Ãµ¿ ²ô±â(ÀÌ¹Ì ½Ãµ¿ÀÌ ²¨Á®ÀÖ´Ù¸é ²¨Á®ÀÖ´Ù°í Ã¼Å©ÇÏ±â)
+	// ì‹œë™ ë„ê¸°(ì´ë¯¸ ì‹œë™ì´ êº¼ì ¸ìˆë‹¤ë©´ êº¼ì ¸ìˆë‹¤ê³  ì²´í¬í•˜ê¸°)
 	public boolean engineStop() {
 		if(this.check) {
 			this.check = false;
@@ -66,34 +66,34 @@ public class PracticeTeacher {
 		CarTeacher myCar = new CarTeacher("Benz", "Black", 15000, "1234");
 		
 		while(true) {
-			System.out.println("1.½Ãµ¿ÄÑ±â\n2.½Ãµ¿²ô±â");
+			System.out.println("1.ì‹œë™ì¼œê¸°\n2.ì‹œë™ë„ê¸°");
 			choice = new Scanner(System.in).nextInt();
 			
-			// ½Ãµ¿ ÄÑ±â
+			// ì‹œë™ ì¼œê¸°
 			if(choice == 1) {
 				if(myCar.engineStart()) {
-					System.out.print("ºñ¹Ğ¹øÈ£ ÀÔ·Â : ");
+					System.out.print("ë¹„ë°€ë²ˆí˜¸ ì…ë ¥ : ");
 					myCar.checkPw(new Scanner(System.in).next());
 					
 					if(myCar.check) {
-						System.out.println("½Ãµ¿ Å´!");
+						System.out.println("ì‹œë™ í‚´!");
 						continue;
 					}
 					
 					if(myCar.policeCnt == 3) {
-						System.out.println("°æÂû Ãâµ¿!");
+						System.out.println("ê²½ì°° ì¶œë™!");
 						break;
 					}
 					
-					System.out.println("ºñ¹Ğ¹øÈ£ ¿À·ù : " + myCar.policeCnt + "È¸");
+					System.out.println("ë¹„ë°€ë²ˆí˜¸ ì˜¤ë¥˜ : " + myCar.policeCnt + "íšŒ");
 					continue;
 				}
-				System.out.println("ÀÌ¹Ì ½Ãµ¿ÀÌ ÄÑÁ®ÀÖ½À´Ï´Ù.");
+				System.out.println("ì´ë¯¸ ì‹œë™ì´ ì¼œì ¸ìˆìŠµë‹ˆë‹¤.");
 			} else if(choice == 2) {
 				if(myCar.engineStop()) {
-					System.out.println("½Ãµ¿ ²û!");
+					System.out.println("ì‹œë™ ë”!");
 				} else {
-					System.out.println("ÀÌ¹Ì ½Ãµ¿ÀÌ ²¨Á®ÀÖ½À´Ï´Ù.");
+					System.out.println("ì´ë¯¸ ì‹œë™ì´ êº¼ì ¸ìˆìŠµë‹ˆë‹¤.");
 				}
 			} else {
 				break;
