@@ -12,7 +12,7 @@ public class Road {
 				String[] arMenu = getMenu();
 				for (int i = 0; i < arMenu.length; i++) {
 					if(arMenu[i].equals(choice)) {
-						System.out.println(choice + "±¸¸Å ¿Ï·á");
+						System.out.println(choice + "êµ¬ë§¤ ì™„ë£Œ");
 					}
 				}
 				
@@ -20,7 +20,7 @@ public class Road {
 			
 			@Override
 			public String[] getMenu() {
-				String[] arMenu = {"¾Æ¸Þ¸®Ä«³ë", "Ä«Æä¶ó¶¼", "¼ö¹ÚÁÖ½º"};
+				String[] arMenu = {"ì•„ë©”ë¦¬ì¹´ë…¸", "ì¹´íŽ˜ë¼ë–¼", "ìˆ˜ë°•ì£¼ìŠ¤"};
 				return arMenu;
 			}
 		});

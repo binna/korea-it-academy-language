@@ -1,17 +1,17 @@
 package com.lec.java.markerInterface;
 
-// ���� ���� ����� �߿� �ִϸ��̼Ǹ� �����ϰ� �ʹ�.
-// ��Ŀ �������̽��� �̿�
-// �ִϸ��̼����� �ƴ��� �Ǵ��ϴ� �޼ҵ� ����
+// 많은 비디오 영상들 중에 애니메이션만 추출하고 싶다.
+// 마커 인터페이스를 이용
+// 애니메이션인지 아닌지 판단하는 메소드 만듦
 public class TV {
 	
-	//�ܺο��� ���޹��� ���� ��� �� �ִϸ��̼����� �ƴ��� �Ǵ��ϴ� �޼ҵ�
+	// 외부에서 전달받은 영상 목록 중 애니메이션인지 아닌지 판단하는 메소드
 	public void checkAni(Video[] arVideo) {
 		for (int i = 0; i < arVideo.length; i++) {
 			if(arVideo[i] instanceof Animation) {
-				System.out.println("�ִϸ��̼� �Դϴ�.");
+				System.out.println("애니메이션 입니다.");
 			}else {
-				System.out.println("�ִϸ��̼��� �ƴմϴ�.");
+				System.out.println("애니메이션이 아닙니다.");
 			}
 		}
 	} // end checkAni()

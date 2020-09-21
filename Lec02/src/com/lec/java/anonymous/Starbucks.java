@@ -7,12 +7,12 @@ public class Starbucks {
 	void regist(Cafe c) {
 		menus = c.getMenu();
 		
-		System.out.println("------------Ãà °³¾÷------------");
+		System.out.println("------------ì¶• ê°œì—…------------");
 		for (int i = 0; i < menus.length; i++) {
 			System.out.println(menus[i]);
 		}
 		
-		c.sell("¾Æ¸Þ¸®Ä«³ë");
+		c.sell("ì•„ë©”ë¦¬ì¹´ë…¸");
 		
 	} // end regist()
 

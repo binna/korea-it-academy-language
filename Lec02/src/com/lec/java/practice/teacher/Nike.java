@@ -6,13 +6,13 @@ public class Nike {
 	void regist(Market m) {
 		menus = m.getMenu();
 		
-		System.out.println("------------¸Ş´ºÆÇ-----------");
+		System.out.println("------------ë©”ë‰´íŒ-----------");
 		for (int i = 0; i < menus.length; i++) {
 			System.out.println(menus[i]);
 		}
 		
 		if(!(m instanceof MarketAdapter)) {
-			m.sell("Ãà±¸°ø");
+			m.sell("ì¶•êµ¬ê³µ");
 		}
 	}
 }

@@ -9,7 +9,7 @@ public class Road {
 		jamsil.regist(new MarketAdapter() {
 			@Override
 			public String[] getMenu() {
-				String[] arMenu = {"¿îµ¿È­", "½½¸®ÆÛ", "¼¾µé", "Ãà±¸°ø"};
+				String[] arMenu = {"ìš´ë™í™”", "ìŠ¬ë¦¬í¼", "ì„¼ë“¤", "ì¶•êµ¬ê³µ"};
 				
 				return arMenu;
 			}
@@ -21,18 +21,18 @@ public class Road {
 			public void sell(String choice) {
 				String[] arMenu = getMenu();
 				
-				System.out.println("°í°´´ÔÀÌ ±¸¸ÅÇÑ »óÇ°----------------");
+				System.out.println("ê³ ê°ë‹˜ì´ êµ¬ë§¤í•œ ìƒí’ˆ----------------");
 				for(int i = 0; i < arMenu.length; i++) {
 					
 					if(arMenu[i].equals(choice)) {
-						System.out.println(choice + " ±¸¸Å ¿Ï·á");
+						System.out.println(choice + " êµ¬ë§¤ ì™„ë£Œ");
 					}
 				}
 			}
 			
 			@Override
 			public String[] getMenu() {
-				String[] arMenu = {"¿îµ¿È­", "½½¸®ÆÛ", "¼¾µé", "Ãà±¸°ø"};
+				String[] arMenu = {"ìš´ë™í™”", "ìŠ¬ë¦¬í¼", "ì„¼ë“¤", "ì¶•êµ¬ê³µ"};
 				
 				return arMenu;
 			}

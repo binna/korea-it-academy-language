@@ -7,7 +7,7 @@ public class ExceptionTest {
 		try {
 			System.out.println(10/0);
 		} catch (ArithmeticException e) {
-			System.out.println("0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		
 	} // end main()

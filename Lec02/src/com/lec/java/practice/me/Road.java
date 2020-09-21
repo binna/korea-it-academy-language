@@ -3,13 +3,13 @@ package com.lec.java.practice.me;
 public class Road {
 	
 	public static void main(String[] args) {
-		// °­³²Á¡ ¸ÅÀå µî·Ï
+		// ê°•ë‚¨ì  ë§¤ì¥ ë“±ë¡
 		Nike gangnam = new Nike(); 
 		gangnam.regist(new MarketAdapter(){
 			
 			@Override
 			public String[] getMenu() {
-				String[] arMenu = {"¿îµ¿È­", "½½¸®ÆÛ", "¼¾µé"};
+				String[] arMenu = {"ìš´ë™í™”", "ìŠ¬ë¦¬í¼", "ì„¼ë“¤"};
 				
 				return arMenu;
 			}
@@ -18,11 +18,11 @@ public class Road {
 			public void sell(String choice) {
 				String[] arMenu = getMenu();
 				
-				System.out.println("°í°´´ÔÀÌ ±¸¸ÅÇÑ »óÇ°----------------");
+				System.out.println("ê³ ê°ë‹˜ì´ êµ¬ë§¤í•œ ìƒí’ˆ----------------");
 				for(int i = 0; i < arMenu.length; i++) {
 					
 					if(arMenu[i].equals(choice)) {
-						System.out.println(choice + "±¸¸Å ¿Ï·á");
+						System.out.println(choice + "êµ¬ë§¤ ì™„ë£Œ");
 					}
 				}
 				
@@ -30,19 +30,18 @@ public class Road {
 			
 		});
 		
-		// ¹«·á ³ª´® Çà»çÁßÀÎ ¸ÅÀå
+		// ë¬´ë£Œ ë‚˜ëˆ” í–‰ì‚¬ì¤‘ì¸ ë§¤ì¥
 		Nike freeSharing = new Nike(); 
 		freeSharing.regist(new MarketAdapter(){
 			
 			@Override
 			public String[] getMenu() {
-				String[] arMenu = {"¿îµ¿È­", "½½¸®ÆÛ", "¼¾µé", "ÇÏÀÌÈú"};
+				String[] arMenu = {"ìš´ë™í™”", "ìŠ¬ë¦¬í¼", "ì„¼ë“¤", "í•˜ì´í"};
 				
 				return arMenu;
 			}
 			
 		});
-		
 	} // end main()
 
 } // end class

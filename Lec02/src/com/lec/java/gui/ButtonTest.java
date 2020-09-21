@@ -14,19 +14,19 @@ public class ButtonTest extends Frame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		switch(e.getActionCommand()) {
 		case "1":
-			System.out.println("Ã¹¹øÂ°");
+			System.out.println("ì²«ë²ˆì§¸");
 			break;
 		case "2":
-			System.out.println("µÎ¹øÂ°");
+			System.out.println("ë‘ë²ˆì§¸");
 			break;
 		}
 	}
 	
 	public ButtonTest() {
-		super("¹öÆ° Å×½ºÆ®");				// title¸í, Á¦¸ñÇ¥½ÃÁÙ¿¡ "¹öÆ° Å×½ºÆ®" ÀÌ¸§ ¼³Á¤
-		setBounds(580, 150, 500, 500);	// ¶ã Ã¢ÀÇ Å©±â
+		super("ë²„íŠ¼ í…ŒìŠ¤íŠ¸");				// titleëª…, ì œëª©í‘œì‹œì¤„ì— "ë²„íŠ¼ í…ŒìŠ¤íŠ¸" ì´ë¦„ ì„¤ì •
+		setBounds(580, 150, 500, 500);	// ëœ° ì°½ì˜ í¬ê¸°
 		
-		// ¹öÆ° 2°³ Ãß°¡
+		// ë²„íŠ¼ 2ê°œ ì¶”ê°€
 		Button btn1 = new Button("1");
 		Button btn2 = new Button("2");
 		setLayout(new FlowLayout());
@@ -35,9 +35,9 @@ public class ButtonTest extends Frame implements ActionListener{
 		btn1.addActionListener(this);
 		btn2.addActionListener(this);
 		
-		// ±Í ¸¸µé±â!(Áï, ¹İÀÀ¿¡ ¹İÀÀÇÏ°Ô ¸¸µé±â) > ¸®½ºÅÍ ¸¸µé¾îÁÖ¸é µÊ
-		// ±×·¯³ª ¸®½º³Ê¸¦ ¸¸µé¾îÁÖ¸é ¸ğµÎ ¼³Á¤ÇØÁà¾ßÇÏ´Ï±ñ 
-		// ÀÏºÎ¸¸ ¼³Á¤ÇÏ±â À§ÇØ Adapter, ÀÍ¸íÅ¬·¡½º ÀÌ¿ëÇÏ¿© Á¾·á ¿¢¼ÇÀÌ µ¿ÀÛÇÏµµ·Ï ¸¸µê
+		// ê·€ ë§Œë“¤ê¸°!(ì¦‰, ë°˜ì‘ì— ë°˜ì‘í•˜ê²Œ ë§Œë“¤ê¸°) > ë¦¬ìŠ¤í„° ë§Œë“¤ì–´ì£¼ë©´ ë¨
+		// ê·¸ëŸ¬ë‚˜ ë¦¬ìŠ¤ë„ˆë¥¼ ë§Œë“¤ì–´ì£¼ë©´ ëª¨ë‘ ì„¤ì •í•´ì¤˜ì•¼í•˜ë‹ˆê¹ 
+		// ì¼ë¶€ë§Œ ì„¤ì •í•˜ê¸° ìœ„í•´ Adapter, ìµëª…í´ë˜ìŠ¤ ì´ìš©í•˜ì—¬ ì¢…ë£Œ ì—‘ì…˜ì´ ë™ì‘í•˜ë„ë¡ ë§Œë“¦
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
@@ -45,7 +45,7 @@ public class ButtonTest extends Frame implements ActionListener{
 			}
 		});
 
-		setVisible(true);				// Ã¢ÀÌ ´«¿¡ º¸ÀÌ°Ô ÇÏ·Á¸é true¸¦ Áà¾ßÇÔ
+		setVisible(true);				// ì°½ì´ ëˆˆì— ë³´ì´ê²Œ í•˜ë ¤ë©´ trueë¥¼ ì¤˜ì•¼í•¨
 	}
 
 	public static void main(String[] args) {

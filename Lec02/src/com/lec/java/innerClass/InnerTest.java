@@ -4,28 +4,28 @@ class Out {
 	int outData;
 	
 	public Out() {
-		System.out.println("¿ÜºÎ Å¬·¡½º »ı¼ºÀÚ È£ÃâµÊ.");
+		System.out.println("ì™¸ë¶€ í´ë˜ìŠ¤ ìƒì„±ì í˜¸ì¶œë¨.");
 	}
 	
 	public void intro_out() {
-		System.out.println("¿ÜºÎ Å¬·¡½º ¸Ş¼Òµå È£ÃâµÊ.");
+		System.out.println("ì™¸ë¶€ í´ë˜ìŠ¤ ë©”ì†Œë“œ í˜¸ì¶œë¨.");
 	}
 	
-	// ³»ºÎÅ¬·¡½º, Ä¸½¶È­
-	// ³»ºÎÅ¬·¡½º´Â ¿ÜºÎÅ¬·¡½ºÀÇ °°Àº ÇÊµå ¾È¿¡¸¸ ÀÖÀ» »Ó ÀÚ½ÄÀÌ ¾Æ´Ï´Ù.
-	// ÀÚ½ÄÀº ¹İµå½Ã extends·Î ¹Ş´Â´Ù´Â Á¡ ²À ±â¾ïÇÏ±â!
+	// ë‚´ë¶€í´ë˜ìŠ¤, ìº¡ìŠí™”
+	// ë‚´ë¶€í´ë˜ìŠ¤ëŠ” ì™¸ë¶€í´ë˜ìŠ¤ì˜ ê°™ì€ í•„ë“œ ì•ˆì—ë§Œ ìˆì„ ë¿ ìì‹ì´ ì•„ë‹ˆë‹¤.
+	// ìì‹ì€ ë°˜ë“œì‹œ extendsë¡œ ë°›ëŠ”ë‹¤ëŠ” ì  ê¼­ ê¸°ì–µí•˜ê¸°!
 	class In {
 		int inData;
 		
 		public In() {
-			System.out.println("³»ºÎ Å¬·¡½º »ı¼ºÀÚ È£ÃâµÊ.");
+			System.out.println("ë‚´ë¶€ í´ë˜ìŠ¤ ìƒì„±ì í˜¸ì¶œë¨.");
 		}
 		
 		public void intro_in() {
 			outData = 100;
 			System.out.println(outData);
 			intro_out();
-			System.out.println("³»ºÎ Å¬·¡½º ¸Ş¼Òµå È£ÃâµÊ.");
+			System.out.println("ë‚´ë¶€ í´ë˜ìŠ¤ ë©”ì†Œë“œ í˜¸ì¶œë¨.");
 		}
 		
 	} // end In class
@@ -37,7 +37,7 @@ public class InnerTest {
 	public static void main(String[] args) {
 		Out out = new Out();
 		
-		// ÀÏ´Ü ¿ÜºÎÅ¬·¡½º°¡ ÀÎ½ºÅÏ½º µÇ¾î¾ß ³»ºÎ Å¬·¡½ºµµ ÀÎ½ºÅÏ½º µÈ´Ù..!!
+		// ì¼ë‹¨ ì™¸ë¶€í´ë˜ìŠ¤ê°€ ì¸ìŠ¤í„´ìŠ¤ ë˜ì–´ì•¼ ë‚´ë¶€ í´ë˜ìŠ¤ë„ ì¸ìŠ¤í„´ìŠ¤ ëœë‹¤..!!
 		Out.In in = out.new In();
 		
 		in.intro_in();
