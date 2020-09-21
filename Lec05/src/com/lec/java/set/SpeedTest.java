@@ -14,8 +14,8 @@ public class SpeedTest {
 		final List<Integer> arrayList = new ArrayList<Integer>(SIZE);
 		final Set<Integer> hashSet = new HashSet<>(SIZE);
 		final int data = 9_000_000;
-		// º¯¬˜ ∫¥∑ƒ ¡˝∞Ë ø¨ªÍ
 		
+		// ÏàúÏ∞® Î≥ëÎ†¨ ÏßëÍ≥ÑÏó∞ÏÇ∞
 		IntStream.range(0, SIZE).forEach(value ->{
 			arrayList.add(value);
 			hashSet.add(value);
@@ -26,13 +26,13 @@ public class SpeedTest {
 		Instant end = Instant.now();
 		
 		long elapsedTime = Duration.between(start, end).toMillis();
-		System.out.println("arrayList : " + elapsedTime * 0.001 + "√ ");
+		System.out.println("arrayList : " + elapsedTime * 0.001 + "Ï¥à");
 		
 		start = Instant.now();
 		hashSet.contains(data);
 		end = Instant.now();
 		
 		elapsedTime = Duration.between(start, end).toMillis();
-		System.out.println("hashSet : " + elapsedTime * 0.001 + "√ ");
+		System.out.println("hashSet : " + elapsedTime * 0.001 + "Ï¥à");
 	}
 }
