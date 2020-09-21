@@ -14,8 +14,8 @@ public class SpeedTest {
 		final List<Integer> arrayList = new ArrayList<Integer>(SIZE);
 		final Set<Integer> hashSet = new HashSet<>(SIZE);
 		final int data = 9_000_000;
+		// 순차 병렬 집계 연산
 		
-		// 순차 병렬 집계연산
 		IntStream.range(0, SIZE).forEach(value ->{
 			arrayList.add(value);
 			hashSet.add(value);
