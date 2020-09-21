@@ -3,31 +3,30 @@ package com.lec.java.wrapperClass;
 public class WrapperClass2 {
 	
 	public static void main(String[] args) {
-		// ´Ù¸¥ Å¸ÀÔÀº ¹è¿­·Î ´ãÀ» ¼ö ¾ø´Ù.
-		// ±×·¯³ª ¾Æ·¡ÀÇ ¹æ¹ıÀ» ÀÌ¿ëÇÏ¸é ´ãÀ» ¼ö ÀÖ´Ù.
+		// ë‹¤ë¥¸ íƒ€ì…ì€ ë°°ì—´ë¡œ ë‹´ì„ ìˆ˜ ì—†ë‹¤.
+		// ê·¸ëŸ¬ë‚˜ ì•„ë˜ì˜ ë°©ë²•ì„ ì´ìš©í•˜ë©´ ë‹´ì„ ìˆ˜ ìˆë‹¤.
 		Object[] datas = {3, 3.0, 'A', "ABC", true};
 		
-		// À§ÀÇ datasµé¿¡¼­ »ç¿ëµÈ ±â¼ú
+		// ìœ„ì˜ datasë“¤ì—ì„œ ì‚¬ìš©ëœ ê¸°ìˆ 
 		// 1. up-casting
 		// 2. auto-boxing
 		
-		// auto-boxing »ç¿ëÇÏÁö ¾Ê´Â´Ù¸é...!!
+		// auto-boxing ì‚¬ìš©í•˜ì§€ ì•ŠëŠ”ë‹¤ë©´...!!
 		Object[] datasNoAuto = {new Integer(3), new Double(3.0),
 				new Character('A'), new String("ABC"), new Boolean(true)};
 		
-		// ºü¸¥ for¹®(forEach¹®, Çâ»óµÈ for¹®)À» ÀÌ¿ëÇÏ¿© ÀúÀåµÈ µ¥ÀÌÅÍ Ãâ·ÂÇÏ±â
-		System.out.println("ºü¸¥ for¹® : datas");
+		// ë¹ ë¥¸ forë¬¸(forEachë¬¸, í–¥ìƒëœ forë¬¸)ì„ ì´ìš©í•˜ì—¬ ì €ì¥ëœ ë°ì´í„° ì¶œë ¥í•˜ê¸°
+		System.out.println("ë¹ ë¥¸ forë¬¸ : datas");
 		for(Object obj : datas) {
 			System.out.print(obj + " ");
 		}
 		
 		System.out.println();
 		System.out.println();
-		System.out.println("ºü¸¥ for¹® : datasNoAuto");
+		System.out.println("ë¹ ë¥¸ forë¬¸ : datasNoAuto");
 		for(Object obj : datasNoAuto) {
 			System.out.print(obj + " ");
 		}
-		
 	} // end main()
 
 } // end class

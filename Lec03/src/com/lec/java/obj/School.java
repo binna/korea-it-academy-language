@@ -3,12 +3,12 @@ package com.lec.java.obj;
 public class School {
 	
 	public static void main(String[] args) {
-		Student std1 = new Student(1, "¹Úºó³ª");
-		Student std2 = new Student(1, "¹Úºó³ª");
+		Student std1 = new Student(1, "ë°•ë¹ˆë‚˜");
+		Student std2 = new Student(1, "ë°•ë¹ˆë‚˜");
 		
-		// ObjectÀÇ equals()´Â ÁÖ¼Ò ºñ±³, ObjecthashCode()´Â °´Ã¼°¡ °¡Áö°í ÀÖ´Â ÁÖ¼Ò°ª 
-		// ¿©±â¼­´Â °°Àº ÇĞ»ıÀÎÁö ºñ±³¿Í ¹øÈ£ ºñ±³°¡ ÇÊ¿äÇÔ
-		// ÀÌ·²¶§ ÇÊ¿äÇÑ °ÍÀÌ equals(), hashCode() ÀçÁ¤ÀÇ ÇÊ¿ä
+		// Objectì˜ equals()ëŠ” ì£¼ì†Œ ë¹„êµ, ObjecthashCode()ëŠ” ê°ì²´ê°€ ê°€ì§€ê³  ìˆëŠ” ì£¼ì†Œê°’ 
+		// ì—¬ê¸°ì„œëŠ” ê°™ì€ í•™ìƒì¸ì§€ ë¹„êµì™€ ë²ˆí˜¸ ë¹„êµê°€ í•„ìš”í•¨
+		// ì´ëŸ´ë•Œ í•„ìš”í•œ ê²ƒì´ equals(), hashCode() ì¬ì •ì˜ í•„ìš”
 		System.out.println("std1.hashCode() : " + std1.hashCode());
 		System.out.println("std2.hashCode() : " + std2.hashCode());
 		System.out.println("std1.equals(std2) : " + std1.equals(std2));

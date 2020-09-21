@@ -3,8 +3,8 @@ package com.lec.java.forEach;
 public class ForEachTest {
 
 	public static void main(String[] args) {
-		// 2Â÷¿ø ¹è¿­À» ºü¸¥ for¹® »ç¿ë
-		// ÃÑÁ¡°ú Æò±ÕÀ» ±¸ÇÏ±â
+		// 2ì°¨ì› ë°°ì—´ì„ ë¹ ë¥¸ forë¬¸ ì‚¬ìš©
+		// ì´ì ê³¼ í‰ê· ì„ êµ¬í•˜ê¸°
 		int[][] arrScore = {
 				{10, 20, 30},
 				{11, 25, 39},
@@ -21,11 +21,10 @@ public class ForEachTest {
 				total += score;
 			}
 			avg = (double)total / arScore.length;
-			System.out.println("ÃÑÁ¡ : " + total + "Á¡");
-			System.out.println("Æò±Õ : " + avg + "Á¡");
+			System.out.println("ì´ì  : " + total + "ì ");
+			System.out.println("í‰ê·  : " + avg + "ì ");
 			System.out.println("===================");
 		}
-		
-	} // main()
+	} // end main()
 	
-} // class
+} // end class

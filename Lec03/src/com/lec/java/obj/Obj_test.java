@@ -5,26 +5,26 @@ import java.util.Random;
 public class Obj_test {
 	
 	public static void main(String[] args) {
-		// new¸¦ ÅëÇØ StringÀ» »ı¼ºÇÏ¸é Heap ¿µ¿ª¿¡ Á¸ÀçÇÏ°Ô µÇ°í
+		// newë¥¼ í†µí•´ Stringì„ ìƒì„±í•˜ë©´ Heap ì˜ì—­ì— ì¡´ì¬í•˜ê²Œ ë˜ê³ 
 		String str1 = new String("ABC");
 		String str2 = new String("ABC");
-		// ÁÖ¼Ò´Â ´Ù¸£³ª
+		// ì£¼ì†ŒëŠ” ë‹¤ë¥´ë‚˜
 		System.out.println("str1 == str2 : " + (str1 == str2));
-		// ³»¿ëÀº °°À½
+		// ë‚´ìš©ì€ ê°™ìŒ
 		System.out.println("str1.equals(str2) : " + str1.equals(str2));
 		
-		// Heap ¿µ¿ª¿¡ ¹«Á¶°Ç »õ·Ó°Ô »ı¼ºµÈ´Ù.
+		// Heap ì˜ì—­ì— ë¬´ì¡°ê±´ ìƒˆë¡­ê²Œ ìƒì„±ëœë‹¤.
 		
-		// ¸®ÅÍ·²À» ÀÌ¿ëÇÑ °æ¿ì constant poolÀÌ¶ó´Â ¿µ¿ª¿¡ Á¸ÀçÇÏ°Ô µÈ´Ù.
+		// ë¦¬í„°ëŸ´ì„ ì´ìš©í•œ ê²½ìš° constant poolì´ë¼ëŠ” ì˜ì—­ì— ì¡´ì¬í•˜ê²Œ ëœë‹¤.
 		String str3 = "ABC";
 		String str4 = "ABC";
-		// ÁÖ¼Òµµ °°°í
+		// ì£¼ì†Œë„ ê°™ê³ 
 		System.out.println("str3 == str4 : " + (str3 == str4));
-		// ³»¿ëµµ °°À½
+		// ë‚´ìš©ë„ ê°™ìŒ
 		System.out.println("str3.equals(str4) : " + str3.equals(str4));
 		
-		// constant pool ¿µ¿ªÀº ÀÏÄ¡ÇÏ´Â °ªÀÌ ÀÖ´Ù¸é ±× °ªÀÇ ÁÖ¼ÒµéÀ» °øÀ¯ÇÑ´Ù.
-		// (Áï, »õ·Î ¸¸µå´Â °ÍÀÌ ¾Æ´Ï¶ó ¸¸µé¾îÁø °ø°£ÀÇ ÁÖ¼Ò¸¦ °øÀ¯ÇÑ´Ù.)
+		// constant pool ì˜ì—­ì€ ì¼ì¹˜í•˜ëŠ” ê°’ì´ ìˆë‹¤ë©´ ê·¸ ê°’ì˜ ì£¼ì†Œë“¤ì„ ê³µìœ í•œë‹¤.
+		// (ì¦‰, ìƒˆë¡œ ë§Œë“œëŠ” ê²ƒì´ ì•„ë‹ˆë¼ ë§Œë“¤ì–´ì§„ ê³µê°„ì˜ ì£¼ì†Œë¥¼ ê³µìœ í•œë‹¤.)
 		
 		System.out.println("-----------------------------------------");
 		System.out.println("str1 == str3 : " + (str1 == str3));

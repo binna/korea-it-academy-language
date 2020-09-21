@@ -13,8 +13,8 @@ public class WrapperClass {
 		data = data_I.intValue();
 		System.out.println(data);
 		
-		// À§ÀÇ °°Àº ¹æ½ÄÀº ³Ê¹« ³Ê¹« ³Ê¹« ¹ø°Å·Ó´Ù
-		// ¹ø°Å·Î¿òÀ» ±Øº¹ÇÏ±â À§ÇØ JDK 5 ¹öÀü ÀÌÈÄºÎÅÍ´Â ¿ÀÅä(auto)¸¦ Áö¿øÇÑ´Ù.
+		// ìœ„ì˜ ê°™ì€ ë°©ì‹ì€ ë„ˆë¬´ ë„ˆë¬´ ë„ˆë¬´ ë²ˆê±°ë¡­ë‹¤
+		// ë²ˆê±°ë¡œì›€ì„ ê·¹ë³µí•˜ê¸° ìœ„í•´ JDK 5 ë²„ì „ ì´í›„ë¶€í„°ëŠ” ì˜¤í† (auto)ë¥¼ ì§€ì›í•œë‹¤.
 		int data_auto= 20;
 		
 		// auto boxing
@@ -24,7 +24,6 @@ public class WrapperClass {
 		// auto unboxing
 		data_auto = data_auto_I;
 		System.out.println(data_auto);
-		
 	} // end main()
 	
 } // end class

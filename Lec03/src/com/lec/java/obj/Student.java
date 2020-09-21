@@ -11,7 +11,7 @@ public class Student {
 		this.name = name;
 	}
 	
-	// equals(), hashCode() ÀçÁ¤ÀÇ
+	// equals(), hashCode() ì¬ì •ì˜
 	@Override
 	public boolean equals(Object obj) {
 		if(obj instanceof Student) {
