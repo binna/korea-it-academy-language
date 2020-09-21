@@ -18,16 +18,16 @@ class GnrClass2 {
 		T result;
 		
 		if(data instanceof Integer) {
-			result = (T)"Á¤¼ö";
+			result = (T)"ì •ìˆ˜";
 		} else if(data instanceof Double || data instanceof Float) {
-			result = (T)"½Ç¼ö";
+			result = (T)"ì‹¤ìˆ˜";
 		} else if(data instanceof Character) {
-			result = (T)"¹®ÀÚ";
+			result = (T)"ë¬¸ì";
 		} else if(data instanceof String) {
-			result = (T)"¹®ÀÚ¿­";
+			result = (T)"ë¬¸ìì—´";
 		} else {
-			// ¾î¶² ÁÖ¼Ò°ªÀÌ µé¾î¿Ã Áö ¸ğ¸¦ ¶§¿¡´Â null·Î ÃÊ±âÈ­ ÇØÁØ´Ù.
-			// Á¦³×¸¯Àº Ç×»ó Å¬·¡½ºÅ¸ÀÔÀ» ÁöÁ¤¹Ş±â ¶§¹®¿¡ nullÀº ´ëÀÔÇÒ ¼ö ÀÖ´Ù.
+			// ì–´ë–¤ ì£¼ì†Œê°’ì´ ë“¤ì–´ì˜¬ ì§€ ëª¨ë¥¼ ë•Œì—ëŠ” nullë¡œ ì´ˆê¸°í™” í•´ì¤€ë‹¤.
+			// ì œë„¤ë¦­ì€ í•­ìƒ í´ë˜ìŠ¤íƒ€ì…ì„ ì§€ì •ë°›ê¸° ë•Œë¬¸ì— nullì€ ëŒ€ì…í•  ìˆ˜ ìˆë‹¤.
 			result = null;
 		}
 		return result;
@@ -35,7 +35,7 @@ class GnrClass2 {
 }
 
 // 3. Generic Interface
-// : ÀÎÅÍÆäÀÌ½º¿¡ Á¦³×¸¯À» ¼±¾ğÇÏ°í ÁöÁ¤¹ŞÀº Å¬·¡½º¿¡¼­ Å¸ÀÔÀ» Á¤ÇÑ´Ù.
+// : ì¸í„°í˜ì´ìŠ¤ì— ì œë„¤ë¦­ì„ ì„ ì–¸í•˜ê³  ì§€ì •ë°›ì€ í´ë˜ìŠ¤ì—ì„œ íƒ€ì…ì„ ì •í•œë‹¤.
 class GenInterClass implements GerInter<Double, Integer> {
 	@Override
 	public Double add(Double data1, Double data2) {
@@ -56,11 +56,11 @@ class GenInterClass implements GerInter<Double, Integer> {
 public class GnrTest {
 	public static void main(String[] args) {
 		// 1. Generic Class
-		// : Å¬·¡½º ³»ºÎ¿¡¼­ »ç¿ëµÉ ÀÚ·áÇüÀ» ÁöÁ¤ÇÑ´Ù.
-		//   Å¬·¡½º¸í µÚ¿¡¼­ Á¦³×¸¯À» ¼±¾ğÇÑ´Ù.
+		// : í´ë˜ìŠ¤ ë‚´ë¶€ì—ì„œ ì‚¬ìš©ë  ìë£Œí˜•ì„ ì§€ì •í•œë‹¤.
+		//   í´ë˜ìŠ¤ëª… ë’¤ì—ì„œ ì œë„¤ë¦­ì„ ì„ ì–¸í•œë‹¤.
 		
-		// Á¦³×¸¯¿¡´Â Wrapper Å¬·¡½º ÇüÅÂ·Î ÀÛ¼ºÇØ¾ß ÇÑ´Ù.
-		// Á¦³×¸¯ Å¬·¡½º´Â ¾Æ·¡ÀÇ µÎ°¡Áö ¹æ¹ıÀ¸·Î ÀÎ½ºÅÏ½º ÇÒ ¼ö ÀÖ´Ù.
+		// ì œë„¤ë¦­ì—ëŠ” Wrapper í´ë˜ìŠ¤ í˜•íƒœë¡œ ì‘ì„±í•´ì•¼ í•œë‹¤.
+		// ì œë„¤ë¦­ í´ë˜ìŠ¤ëŠ” ì•„ë˜ì˜ ë‘ê°€ì§€ ë°©ë²•ìœ¼ë¡œ ì¸ìŠ¤í„´ìŠ¤ í•  ìˆ˜ ìˆë‹¤.
 		GnrClass<Integer> gc1 = new GnrClass<Integer>();
 		GnrClass<Integer> gc2 = new GnrClass<>();
 		
@@ -72,9 +72,9 @@ public class GnrTest {
 		
 		System.out.println("======================================");
 		// 2.Generic Method
-		// : Å¬·¡½º¿¡ Á¦³×¸¯À» ¼±¾ğÇÏÁö ¾Ê°í ¸Ş¼Òµå¿¡¸¸ Á¦³×¸¯À» ¼±¾ğÇÏ´Â ¹æ¹ı.
-		//   ¸Ş¼ÒµåÀÇ ¸Å°³º¯¼ö ¶Ç´Â ¸®ÅÏÅ¸ÀÔÀÌ Á¦³×¸¯ÀÌ¶ó¸é ¸®ÅÏÅ¸ÀÔ ¾Õ¿¡µµ Á¦³×¸¯À» ¼±¾ğÇØ¾ß ÇÑ´Ù.
-		System.out.println(GnrClass2.function("¾È³ç"));
+		// : í´ë˜ìŠ¤ì— ì œë„¤ë¦­ì„ ì„ ì–¸í•˜ì§€ ì•Šê³  ë©”ì†Œë“œì—ë§Œ ì œë„¤ë¦­ì„ ì„ ì–¸í•˜ëŠ” ë°©ë²•.
+		//   ë©”ì†Œë“œì˜ ë§¤ê°œë³€ìˆ˜ ë˜ëŠ” ë¦¬í„´íƒ€ì…ì´ ì œë„¤ë¦­ì´ë¼ë©´ ë¦¬í„´íƒ€ì… ì•ì—ë„ ì œë„¤ë¦­ì„ ì„ ì–¸í•´ì•¼ í•œë‹¤.
+		System.out.println(GnrClass2.function("ì•ˆë…•"));
 		System.out.println(GnrClass2.function(4));
 		System.out.println(3.4f);
 		System.out.println('a');
