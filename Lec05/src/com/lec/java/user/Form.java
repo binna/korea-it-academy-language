@@ -15,43 +15,43 @@ public class Form {
 		String pw = null;
 		
 		while(true) {
-			System.out.println("1.È¸¿ø°¡ÀÔ\n2.·Î±×ÀÎ\n3.Á¾·á");
+			System.out.println("1.íšŒì›ê°€ì…\n2.ë¡œê·¸ì¸\n3.ì¢…ë£Œ");
 			choice = sc.nextInt();
 			
 			if(choice == 3) {break;}
 			
 			switch(choice) {
-			// È¸¿ø°¡ÀÔ
+			// íšŒì›ê°€ì…
 			case 1:
 				user = new User();
 				
-				// »ç¿ëÀÚÀÇ ¹ø°Å·Î¿òÀ» ÁÙÀÌ±â À§ÇØ main¿¡¼­ ¾ÆÀÌµğ Áßº¹ °Ë»ç¸¦ ÇÑ´Ù.
-				// Áßº¹µÈ ¾ÆÀÌµğ°¡ ¾øÀ»¶§¸¸ ÇØ´ç ¹İº¹¹®À» ¹ş¾î ³¯ ¼ö ÀÖ´Ù.
+				// ì‚¬ìš©ìì˜ ë²ˆê±°ë¡œì›€ì„ ì¤„ì´ê¸° ìœ„í•´ mainì—ì„œ ì•„ì´ë”” ì¤‘ë³µ ê²€ì‚¬ë¥¼ í•œë‹¤.
+				// ì¤‘ë³µëœ ì•„ì´ë””ê°€ ì—†ì„ë•Œë§Œ í•´ë‹¹ ë°˜ë³µë¬¸ì„ ë²—ì–´ ë‚  ìˆ˜ ìˆë‹¤.
 				while(true) {
-					System.out.print("¾ÆÀÌµğ : ");
+					System.out.print("ì•„ì´ë”” : ");
 					id = sc.next();
 					if(user_field.checkId(id) == null) {break;}
-					else {System.out.println("Áßº¹µÈ ¾ÆÀÌµğÀÔ´Ï´Ù.");}
+					else {System.out.println("ì¤‘ë³µëœ ì•„ì´ë””ì…ë‹ˆë‹¤.");}
 				}
 				user.setId(id);
-				System.out.print("ºñ¹Ğ¹øÈ£ : ");
+				System.out.print("ë¹„ë°€ë²ˆí˜¸ : ");
 				user.setPw(sc.next());
 				
 				user_field.join(user);
 				break;
-			// ·Î±×ÀÎ
+			// ë¡œê·¸ì¸
 			case 2:
-				System.out.print("¾ÆÀÌµğ : ");
+				System.out.print("ì•„ì´ë”” : ");
 				id = sc.next();
-				System.out.print("ºñ¹Ğ¹øÈ£ : ");
+				System.out.print("ë¹„ë°€ë²ˆí˜¸ : ");
 				pw = sc.next();
 				
-				if(user_field.login(id, pw)) {System.out.println("·Î±×ÀÎ ¼º°ø!");}
-				else {System.out.println("·Î±×ÀÎ ½ÇÆĞ");}
+				if(user_field.login(id, pw)) {System.out.println("ë¡œê·¸ì¸ ì„±ê³µ!");}
+				else {System.out.println("ë¡œê·¸ì¸ ì‹¤íŒ¨");}
 				break;
-			// ±× ¿Ü
+			// ê·¸ ì™¸
 			default:
-				System.out.println("´Ù½Ã");
+				System.out.println("ë‹¤ì‹œ");
 			}
 		}
 	}
