@@ -107,6 +107,7 @@ hs_err_pid*
 
 
 # 필요내용 추가 #
+Lec10/*.dbeaver
 .classpath
 .project
 Servers/*
