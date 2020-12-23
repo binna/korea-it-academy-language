@@ -8,8 +8,7 @@ class Stack:
         # 생성자 함수에서 스택을 만든다.
         self.stack = []     # stack => 빈 리스트 => 데이터는 append() 메소드로 추가한다.
         self.size = size    # 스택의 크기
-        # top, SP(Stack Pointer) => stack의 몇 개의 데이터가 저장되어 있나 기억한다.
-        # => 데이터가 입력되면 1증가, 출력되면 1감소
+        # top, SP(Stack Pointer) => stack 의 몇 개의 데이터가 저장되어 있나 기억한다. => 데이터가 입력되면 1증가, 출력되면 1감소
         self.top = 0
 
     # push => 입력
@@ -18,6 +17,7 @@ class Stack:
             # overflow 인가 검사한다.
             # 스택의 크기(size)가 5일 때 스택으로 사용할 리스트의 인덱스 (top)은 0, 1, 2, 3, 4만 가능하다.
             if self.top < self.size:
+                # overflow 가 발생되지 않았으므로 스택에 데이터를 추가한다.
                 self.stack.append(data)     # 스택에 데이터를 추가한다.
                 self.top += 1               # 스텍 데이터를 추가했으므로 SP를 1증가시킨다.
             else:
@@ -37,7 +37,7 @@ class Stack:
         else:
             # 파이썬의 list 메소드 중에서 pop() 메소드를 사용해서 스택에 저장된 데이터를 얻어온 후 제거한다.
             data = self.stack.pop()     # 스택에 저장된 데이터를 얻어온 후 제거한다.
-            self.top -= 1
+            self.top -= 1               # 스택에 저장된 데이터를 제거했으므로 SP를 1감소시킨다.
             print('pop 데이터 : {}'.format(data), end=', ')
             self.view()
 
@@ -55,7 +55,7 @@ class Stack:
                 if i > 0:
                     print(', ', end='')
                 print(self.stack[i], end=' ')
-                # ===== if
+        # ===== if
         print()
 
 
@@ -71,4 +71,8 @@ if __name__ == '__main__':
     stack.push(11)
     stack.push(15)
     stack.view()
+    stack.pop()
+    stack.pop()
+    stack.pop()
+    stack.pop()
     stack.pop()
