@@ -44,6 +44,7 @@ while True:
 # 로또 1등 번호 만들기
 import random
 lotto = set()
+# 1등 번호
 while True:
     lottoNumber = random.randrange(1, 46)
     # print(lottoNumber, end = ', ')
@@ -51,4 +52,26 @@ while True:
     # print(lotto)
     if len(lotto) == 6:
         break
-print('1등 번호 : {}'.format(lotto))
+print('1등 번호 : {}'.format(lotto), end = ', ')
+
+# 보너스 번호
+while True:
+    bonus = random.randrange(1, 46)
+    if bonus not in lotto:
+        break
+print('보너스 번호 : {}'.format(bonus))
+
+# 미국 로또(파워볼)는 1 ~ 69 사이에 5개, 1 ~ 26 사이에 1개
+import random
+powerball = set()
+# 흰공
+while True:
+    powerballNumber = random.randrange(1, 70)
+    powerball.add(powerballNumber)
+    if len(powerball) == 5:
+        break
+print('흰공 : {}'.format(powerball), end = ', ')
+
+# 빨강공 => 파워볼
+redball = random.randrange(1, 27)
+print('파워볼 : {}'.format(redball))
