@@ -154,7 +154,6 @@ if __name__ == "__main__":
     print("================================================")
     # 데이터를 DoubleLinkedList의 지정된 위치 다음에 추가한다.
     list.appendInsert(3, "수요일")
-    list.appendInsert(0, "이료일")
     list.listPrint()
     print("================================================")
     # 데이터를 제거한다.
