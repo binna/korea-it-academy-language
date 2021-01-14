@@ -16,6 +16,13 @@ divs =soup.findAll('div', {'class': 'tcb-flex-col'})
 #print(len(divs))
 #print(divs)
 
+subjects = []
 for div in divs:
-    chapter = div.findAll('a')
-    print(len(chapter))
+    chapters = div.findAll('a')
+    #print(len(chapters))
+    for chapter in chapters:
+        #print(chapter.text)
+        subjects.append(chapter.text)
+
+for i in range(len(subjects)):
+    print('{0:2d}. {1}'.format(i + 1, subjects[i]))
