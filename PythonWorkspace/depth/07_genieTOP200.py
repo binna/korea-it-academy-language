@@ -69,4 +69,12 @@ for i in range(200):
     data = '{0:3d}위 {1} - {2}'.format(i + 1, genie[i][1], genie[i][0])
     file.write(data + '\n')
 file.close()
-print('melonTOP100.txt 파일로 쓰기 완료')
+print('genieTOP200.txt 파일로 쓰기 완료')
+
+try:
+    file = open('genieTOP200.txt', 'r', -1, 'UTF-8')
+    lines = file.readlines()
+    for line in lines:
+        print(line, end='')
+except:
+    print('디스크에 데이터 파일이 없습니다.')
